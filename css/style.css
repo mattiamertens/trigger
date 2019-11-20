@@ -1,0 +1,124 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+	overflow: hidden;	
+}
+#container {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    display: block;
+	overflow: hidden;
+}
+
+.back{
+	position: absolute;
+	width: 50px;
+	height: 100%;
+	background-color: #4C4C4C;
+}
+.scritta{
+	color: white;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	position: absolute;
+	top: 45%;
+	left: -15%;
+	background-color: #4C4C4C;
+	text-align: center;
+	border-radius: 10%;
+}
+#scritta{
+	transform: rotate(-90deg);
+}
+.components{
+	position: absolute;
+	left: 10%;
+	line-height: 40px;
+	width: 100px;
+	font-size: 14px;
+}
+.components > div{
+	height: 40px;
+	width: 60px;
+	color: #fff;
+	margin: 5px;
+	text-align: center;
+}
+.components>div:nth-child(1){
+	background-color: #333333;
+}
+.components>div:nth-child(2){
+	background-color: #111111;
+}
+.components>div:nth-child(3){
+	background-color: #666666;
+}
+.components>div:nth-child(4){
+	background-color: #999999;
+}
+ul{
+	list-style-type: none;
+}
+.color_palette{
+	width: 600px;
+	height: 60px;
+	position: absolute;
+	left: 30%;
+	display: flex;
+	
+}
+.color_palette div{
+	height: 60px;
+	width: 60px;
+	margin: 0 5px;
+	border: 2.5px solid black;
+}
+
+#colors_co{
+
+}
+
+#colors_ca{
+
+}
+
+#colors_gr{
+
+}
+
+#colors_de{
+
+}
+.magenta{
+	background-color: #ff33cc;
+}
+.obsidian{
+	background-color: #000000;
+}
+.lime{
+	background-color: #ccff00;
+}
+.extramarine{
+	background-color: #2a0dff;
+}
+.calx{
+	background-color: #00ff00;
+}
+.orange{
+	background-color: #ff5310;
+}
+.white{
+	background-color: #fff;
+}
+.fuck{
+	background-color: #ff0066;
+}
