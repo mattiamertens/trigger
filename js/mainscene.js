@@ -4,24 +4,12 @@ var SCREEN_WIDTH, SCREEN_HEIGHT;
 var loader, model;
 var pistoluzza = new THREE.Object3D();
 var pscale = 0.1;
-var qscale = 0.01;
-
+var cube;
 var manager = new THREE.LoadingManager();
 
 // SE VOGLIO CREARE UNA STANZA DI MERDA ATTIVO STO COSO SOTTO
 // var textureCube = new THREE.CubeTextureLoader().load(['json/envmap/posx.jpg', 'json/envmap/negx.jpg', 'json/envmap/posy.jpg', 'json/envmap/negy.jpg', 'json/envmap/posz.jpg', 'json/envmap/negz.jpg']);
 // textureCube.generateMipmaps = false;
-
-
-// TEXTURES
-var backTextures = {
-    'back1': 'json/back1.png',
-    'back2': 'json/backTextures/back2.png',
-    'back3': 'json/backTextures/leo.png',
-}
-currentBackMaterial = backTextures['back3'];
-
-////////////////////////////////////////////////////////
 
 manager.onLoad = function () {
     scene.add(pistoluzza);
@@ -36,7 +24,7 @@ function init() {
         antialias: true,
         alpha: true
     });
-    renderer.setClearColor( 0xaa33ff, 1 );
+    renderer.setClearColor( 0x656256, 1 );
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -46,7 +34,7 @@ function init() {
     controls.maxDistance = 65;
     controls.enablePan = false;
     controls.enableDamping = true;
-    controls.dampingFactor = 1;
+    controls.dampingFactor = 0.2;
     controls.addEventListener('change', render);
 
     camera.position.x = 15;
@@ -55,7 +43,7 @@ function init() {
     camera.lookAt(scene.position);
 
     // LUCI
-    h1 = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.4);
+    h1 = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.5);
     h1.position.set(-300,200, -3000);
     scene.add(h1);
 
@@ -73,6 +61,17 @@ function init() {
     
 
     // PISTOLUZZA
+    // CALCIO
+    var calcioloader = new THREE.GLTFLoader();
+    calcioloader.load( 'json/GLTF/calcio/calcio.gltf', function ( gltf ) {
+
+            calcioObj = gltf.scene;
+            scene.add( calcioObj );
+            gltf.scene.scale.set(pscale, pscale, pscale);
+
+    });
+
+
     // CANNA
     var cannaloader = new THREE.GLTFLoader();
     cannaloader.load( 'json/GLTF/canna/canna.gltf', function ( gltf ) {
@@ -81,16 +80,6 @@ function init() {
             scene.add( cannaObj );
             gltf.scene.scale.set(pscale, pscale, pscale);
             // pistoluzza.add(cannaloader);
-
-    });
-        
-    // CALCIO
-    var calcioloader = new THREE.GLTFLoader();
-    calcioloader.load( 'json/GLTF/calcio/calcio.gltf', function ( gltf ) {
-
-            calcioObj = gltf.scene;
-            scene.add( calcioObj );
-            gltf.scene.scale.set(pscale, pscale, pscale);
 
     });
 
@@ -108,47 +97,49 @@ function init() {
     var calcioloader = new THREE.GLTFLoader();
     calcioloader.load( 'json/GLTF/dettagli/dettagli.gltf', function ( gltf ) {
 
-            scene.add( gltf.scene );
+            dettagliObj = gltf.scene;
+            scene.add( dettagliObj );
             gltf.scene.scale.set(pscale, pscale, pscale);
 
     });
 
-    //BOX GEOMETRY
 
-    // var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    // var material = new THREE.MeshPhongMaterial( {color: 0xccff00} );
-    // var cube = new THREE.Mesh( geometry, material );
-    // cube.receiveShadow = true;
-    // scene.add( cube );
+    // BOX GEOMETRY
+    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    var material = new THREE.MeshPhongMaterial( {color: 0xccff00} );
+    var cube = new THREE.Mesh( geometry, material );
+    cube.receiveShadow = true;
+    scene.add( cube );
 
-    // renderer.shadowMap.enabled = true;
-    // renderer.shadowMap.type = THREE.BasicShadowMap;
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.BasicShadowMap;
     
     // CANNA
-    $("#colorOption1").change(function setAnotherTexture() {
-        var textureColor = document.getElementById("colorOption1").value;
-        var textureLoader = new THREE.TextureLoader();
+    // $("#colorOption1").change(function setAnotherTexture() {
+    //     var textureColor = document.getElementById("colorOption1").value;
+    //     var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
+    //     var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+    //     newTexture.encoding = THREE.sRGBEncoding;
+    //     newTexture.flipY = false;
     
-        cannaObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
+    //     cannaObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
             
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
+    //         if (child instanceof THREE.Mesh) {
+    //             //create a global var to reference later when changing textures
+    //             //apply texture
 
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
+    //             child.material.map = newTexture;
+    //             child.material.needsUpdate = true;
+    //             child.material.map.needsUpdate = true;
+    //         }
+    //     });
+    // });
 
     //CALCIO
-    $("#colorOption").change(function setAnotherTexture() {
-        var textureColor = document.getElementById("colorOption").value;
+    $("#colors_co").children('div').click(function setAnotherTexture() {
+        var textureColor = this.className;
+        // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
         var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
@@ -168,8 +159,31 @@ function init() {
         });
     });
 
+    //CANNA
+    $("#colors_ca").children('div').click(function setAnotherTexture() {
+        var textureColor = this.className;
+        // console.log(textureColor);
+        var textureLoader = new THREE.TextureLoader();
+        
+        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        newTexture.encoding = THREE.sRGBEncoding;
+        newTexture.flipY = false;
+    
+        cannaObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
+            
+            if (child instanceof THREE.Mesh) {
+                //create a global var to reference later when changing textures
+                //apply texture
+
+                child.material.map = newTexture;
+                child.material.needsUpdate = true;
+                child.material.map.needsUpdate = true;
+            }
+        });
+    });
+
     //GRILLETTO
-    $(".color_palette").children('div').click(function setAnotherTexture() {
+    $("#colors_gr").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
@@ -190,19 +204,51 @@ function init() {
             }
         });
     });
-   
+
+    //DETTAGLI
+    $("#colors_de").children('div').click(function setAnotherTexture() {
+        var textureColor = this.className;
+        // console.log(textureColor);
+        var textureLoader = new THREE.TextureLoader();
+        
+        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        newTexture.encoding = THREE.sRGBEncoding;
+        newTexture.flipY = false;
     
+        dettagliObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
+            
+            if (child instanceof THREE.Mesh) {
+                //create a global var to reference later when changing textures
+                //apply texture
+
+                child.material.map = newTexture;
+                child.material.needsUpdate = true;
+                child.material.map.needsUpdate = true;
+            }
+        });
+    });
+   
 
     $("#container").append(renderer.domElement);
 }
 
 function render() {
+
+}
+
+var SPEED = 0.01;
+function rotateCube() {
+    cube.rotation.x -= SPEED * 2;
+    cube.rotation.y -= SPEED;
+    cube.rotation.z -= SPEED * 3;
 }
 
 function animate() {
     requestAnimationFrame(animate);
     render();
     renderer.render(scene, camera);
+    controls.update(); // keep inertia after leaving
+    rotateCube();
 }
 init();
 animate();
@@ -210,31 +256,30 @@ animate();
 /////////////////////////////////////////////////////////////////////////////
 
 // SEDUTA
+// $('.backk').on('click', function () {
 
-$('.backk').on('click', function () {
-
-    textureTarget = $(this).attr("alt");
+//     textureTarget = $(this).attr("alt");
 	
-    protoBack = new THREE.TextureLoader().load( backTextures[textureTarget], function () {
-        mat = new THREE.MeshPhongMaterial({
-            map: protoBack,
-            shininess: 0,
-            reflectivity: 0,
-            bumpScale: .0001
-        });
-        loader.load( 'json/GLTF/calcio.glb', function ( gltf ) {
+//     protoBack = new THREE.TextureLoader().load( backTextures[textureTarget], function () {
+//         mat = new THREE.MeshPhongMaterial({
+//             map: protoBack,
+//             shininess: 0,
+//             reflectivity: 0,
+//             bumpScale: .0001
+//         });
+//         loader.load( 'json/GLTF/calcio.glb', function ( gltf ) {
 
-            scene.add( gltf.scene );
-            gltf.scene.scale.set(pscale, pscale, pscale);
+//             scene.add( gltf.scene );
+//             gltf.scene.scale.set(pscale, pscale, pscale);
         
-            }, undefined, function ( error ) {
+//             }, undefined, function ( error ) {
         
-            console.error( error );
+//             console.error( error );
         
-        } );
-    });
-    currentBackMaterial = textureTarget;
-});
+//         } );
+//     });
+//     currentBackMaterial = textureTarget;
+// });
 
 
 

@@ -1,19 +1,31 @@
-$('.menuClickZone').on('click', function (event) {
-    event.preventDefault();
-    if( $('.menuswitch').hasClass('plus') ){
-        
-        TweenMax.staggerFrom('.s-btn',.05, {y:10}, 0.05);
-        
-        $('.s-btn-container').removeClass('menuVis');
-        $('.menuswitch').toggleClass('plus');
-    }
-    else {
-        $('.s-btn-container').addClass('menuVis');
-        $('.menuswitch').toggleClass('plus');
-    }
+$('.calcio').on("click", function(){
+    $("#colors_co").addClass('top');
     
+    $("#colors_ca").removeClass('top');
+    $("#colors_gr").removeClass('top');
+    $("#colors_de").removeClass('top');
 });
 
-$('.cerchio1').on("click", function(){
-    $(".quadrato1").addClass('rosso');
-})
+$('.canna').on("click", function(){
+    $("#colors_ca").addClass('top');
+
+    $("#colors_co").removeClass('top');
+    $("#colors_gr").removeClass('top');
+    $("#colors_de").removeClass('top');
+});
+
+$('.grilletto').on("click", function(){
+    $("#colors_gr").addClass('top');
+
+    $("#colors_ca").removeClass('top');
+    $("#colors_co").removeClass('top');
+    $("#colors_de").removeClass('top');
+});
+
+$('.dettagli').on("click", function(){
+    $("#colors_de").addClass('top');
+
+    $("#colors_ca").removeClass('top');
+    $("#colors_gr").removeClass('top');
+    $("#colors_co").removeClass('top');
+});

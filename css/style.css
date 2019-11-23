@@ -82,7 +82,9 @@ ul{
 	margin: 0 5px;
 	border: 2.5px solid black;
 }
-
+.top{
+	z-index: 100;
+}
 #colors_co{
 
 }
