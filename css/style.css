@@ -1,11 +1,28 @@
+@font-face {
+    font-family: 'BRRR';
+    src: url('BRRR/BRRR-Medium.woff2') format('woff2'),
+        url('BRRR/BRRR-Medium.woff') format('woff'),
+        url('BRRR/BRRR-Medium.ttf') format('truetype'),
+        url('BRRR/BRRR-Medium.svg#BRRR-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
 *{
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500; /* wight = 500 (medium) - 400 (normal) - 600 (bold) */
+	font-style: normal;
+    margin: 0px;
+	overflow: hidden;	
+}
+body {
+	font-family: BRRR, sans-serif;
+
     margin: 0px;
 	overflow: hidden;	
 }
