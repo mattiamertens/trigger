@@ -236,19 +236,18 @@ function render() {
 
 }
 
-var SPEED = 0.01;
-function rotateCube() {
-    cube.rotation.x -= SPEED * 2;
-    cube.rotation.y -= SPEED;
-    cube.rotation.z -= SPEED * 3;
-}
+// var SPEED = 0.01;
+// function rotateCube() {
+//     cube.rotation.x -= SPEED * 2;
+//     cube.rotation.y -= SPEED;
+//     cube.rotation.z -= SPEED * 3;
+// }
 
 function animate() {
     requestAnimationFrame(animate);
     render();
     renderer.render(scene, camera);
     controls.update(); // keep inertia after leaving
-    rotateCube();
 }
 init();
 animate();
