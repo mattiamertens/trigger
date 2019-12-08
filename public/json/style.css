@@ -1,0 +1,48 @@
+.fake_elements{
+    display: none;
+}
+
+.png-container{
+    width: 200px;
+    height: 112px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.png-container > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+/* Si applica a tutti i png presenti */
+.png-container > * > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    opacity: 0;
+    
+}
+
+.test{
+    background-color: blue;
+}
+#calcio{
+    width: 100%;
+    height: 100%;
+}
+.magenta_co{
+    background-image: url('assets/calcio/magenta.jpeg');
+}
+.calx_co{
+    background-image: url('assets/calcio/calx.jpeg');
+}
+
+.projected{
+    opacity: 1;
+    z-index: 10;
+}
