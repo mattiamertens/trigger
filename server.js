@@ -6,11 +6,11 @@ var hbs = require('nodemailer-express-handlebars');
 const handlebarOptions = {
     viewEngine: {
       extName: '.hbs',
-      partialsDir: './views/partials',
-      layoutsDir: './views/layouts',
+      partialsDir: 'public/views/partials',
+      layoutsDir: 'public/views/layouts',
       defaultLayout: 'index.hbs',
     },
-    viewPath: './views/',
+    viewPath: 'public/views/',
     extName: '.hbs',
 };
 
@@ -68,6 +68,7 @@ function newConnection(socket){
         console.log('oopop');
         io.sockets.emit('r_co_1');
         // socket.broadcast.emit('return-msg', data);
+        
         transporter.sendMail(mailOptions, function(err, data){
             if (err){
                 console.log('fuck no' + err);
