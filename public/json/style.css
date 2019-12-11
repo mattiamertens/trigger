@@ -35,11 +35,6 @@
 
 
 /* CALCIO */
-
-#calcio{
-    width: 100%;
-    height: 100%;
-}
 .magenta_co{
     background-image: url('assets/calcio/magenta.png');
 }
@@ -63,6 +58,84 @@
 }
 .fuck_co{
     background-image: url('assets/calcio/fuck.png');
+}
+
+/* CANNA */
+.magenta_ca{
+    background-image: url('assets/canna/magenta.png');
+}
+.obsidian_ca{
+    background-image: url('assets/canna/black.png');
+}
+.lime_ca{
+    background-image: url('assets/canna/radioactive.png');
+}
+.orange_ca{
+    background-image: url('assets/canna/orange.png');
+}
+.calx_ca{
+    background-image: url('assets/canna/calx.png');
+}
+.white_ca{
+    background-image: url('assets/canna/pseudowhite.png');
+}
+.extramarine_ca{
+    background-image: url('assets/canna/extramarine.png');
+}
+.fuck_ca{
+    background-image: url('assets/canna/fuck.png');
+}
+
+/* GRILLETTO */
+.magenta_gr{
+    background-image: url('assets/grilletto/magenta.png');
+}
+.obsidian_gr{
+    background-image: url('assets/grilletto/black.png');
+}
+.lime_gr{
+    background-image: url('assets/grilletto/radioactive.png');
+}
+.orange_gr{
+    background-image: url('assets/grilletto/orange.png');
+}
+/* .calx_gr{
+    background-image: url('assets/grilletto/calx.png');
+} */
+.white_gr{
+    background-image: url('assets/grilletto/pseudowhite.png');
+}
+.extramarine_gr{
+    background-image: url('assets/grilletto/extramarine.png');
+}
+.fuck_gr{
+    background-image: url('assets/grilletto/fuck.png');
+}
+
+/* DETTAGLI */
+.magenta_de{
+    background-image: url('assets/dettagli/magenta.png');
+}
+.obsidian_de{
+    background-image: url('assets/dettagli/black.png');
+}
+.lime_de{
+    background-image: url('assets/dettagli/radioactive.png');
+}
+.orange_de{
+    background-image: url('assets/dettagli/orange.png');
+}
+.calx_de{
+    background-image: url('assets/dettagli/calx.png');
+}
+.white_de{
+    background-image: url('assets/dettagli/pseudowhite.png');
+}
+.extramarine_de{
+    background-image: url('assets/dettagli/extramarine.png');
+}
+.fuck_de{
+    background-image: url('assets/dettagli/fuck.png');
 }
 
 .projected{
