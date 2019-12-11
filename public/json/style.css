@@ -3,8 +3,8 @@
 }
 
 .png-container{
-    width: 200px;
-    height: 112px;
+    width: 1600px;
+    height: 896px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -25,21 +25,44 @@
     height: 100%;
     background-size: contain;
     opacity: 0;
+    background-size: cover;
     
 }
 
 .test{
     background-color: blue;
 }
+
+
+/* CALCIO */
+
 #calcio{
     width: 100%;
     height: 100%;
 }
 .magenta_co{
-    background-image: url('assets/calcio/magenta.jpeg');
+    background-image: url('assets/calcio/magenta.png');
+}
+.obsidian_co{
+    background-image: url('assets/calcio/black.png');
+}
+.lime_co{
+    background-image: url('assets/calcio/radioactive.png');
+}
+.orange_co{
+    background-image: url('assets/calcio/orange.png');
 }
 .calx_co{
-    background-image: url('assets/calcio/calx.jpeg');
+    background-image: url('assets/calcio/calx.png');
+}
+.white_co{
+    background-image: url('assets/calcio/pseudowhite.png');
+}
+.extramarine_co{
+    background-image: url('assets/calcio/extramarine.png');
+}
+.fuck_co{
+    background-image: url('assets/calcio/fuck.png');
 }
 
 .projected{

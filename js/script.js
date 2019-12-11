@@ -18,15 +18,14 @@ $('.dettagli').on("click", function(){
 // PALETTE SHOW / HIDE
 $(".palette").on('click', function(){
     $('.color_wrapper').addClass('visibility');
-
-    $('.navbar, #container, .components').addClass('blur');
 });
 
-$(".close").on('click', function(){
+$(".close, .close_txt").on('click', function(){
     $('.color_wrapper').removeClass('visibility');
-    $('.navbar, #container, .components').removeClass('blur');
 });
 
+
+    // SCROLL DOWN TO CANVAS
 $('.done').click(function (){
     $('html, body').animate({
         scrollTop: $("#container").offset().top - 100

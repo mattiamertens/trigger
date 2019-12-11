@@ -20,6 +20,7 @@
 }
 
 
+
 /* HOMEPAGE RULES */
 *{
 	padding: 0;
@@ -58,16 +59,20 @@ a{
 }
 .sections{
 	position: absolute;
-	left: 60%;
+	left: 54%;
 
 }
 .sections > a:nth-child(2){
 	position: relative;
-	left: 40%;
+	left: 17%;
 }
 .sections > a:nth-child(3){
 	position: relative;
-	left: 80%;
+	left: 34%;
+}
+.sections > a:nth-child(4){
+	position: relative;
+	left: 51%;
 }
 
 .wrapper{
@@ -191,13 +196,6 @@ input{
 	font-size: 20px;
 }
 
-
-
-
-/* OLD RULES */
-
-
-
 /* PALETTE SELECTOR */
 .color_wrapper{
 	z-index: -1; 
@@ -240,15 +238,6 @@ input{
 	line-height: 30px;
 }
 
-
-.blur{
-	animation: blur 0.8s cubic-bezier(.8, 0, .2, 1) forwards;
-}
-@keyframes blur {
-	0% {}
-	100% { filter: blur(7px);}
-}
-
 .color_palette{
 	width: 100%;
 	height: auto;
@@ -270,7 +259,6 @@ input{
 	color: white;
 	top: 330px;
 }
-
 
 .top{
 	z-index: 100;
@@ -299,4 +287,23 @@ input{
 }
 .fuck{
 	background-color: #ff0066;
+}
+
+/* ABOUT US */
+.animated_txt{
+	position: absolute;
+	width: 100%;
+	top: 92px;
+	color: white;
+	font-family: BRRR, sans-serif;
+	font-weight: 500;
+	font-size: 170px;
+	line-height: 95%;
+	max-width: 5000px;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+.outline{
+	-webkit-text-stroke: 1px white;
+	-webkit-text-fill-color: black;
 }

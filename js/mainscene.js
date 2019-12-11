@@ -33,7 +33,7 @@ function init() {
     // CONTROLLO DELLA CAMERA
     controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.minDistance = 30;
-    controls.maxDistance = 40;
+    controls.maxDistance = 30;
     controls.enablePan = false;
     controls.enableDamping = true;
     controls.dampingFactor = 0.2;
@@ -376,22 +376,22 @@ var saveFile = function (strData, filename) {
 // var counter = 0;  // need to increase counter every click
 // var localPath = "/../" + counter + ".png" ;
 
-function sendEmail() {
-	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "trigger.superfluo@gmail.com",
-	Password : "piamose18",
-	To : 'gurki4.mm@gmail.com',
-	// To : mailTo.value,
-	From : "trigger@gmail.com",
-	Subject : "Your Order",
-    Body : "<email body>",
-    Attachments : [
-        {
-            name : "cane.jpg",
-            path : "https://style.corriere.it/wp-content/uploads/2019/11/Gallery-4-Larivei.jpg"
-        }]  
-	}).then(
-		message => console.log("mail sent to:" + mailTo.value)
-    );
-};
+// function sendEmail() {
+// 	Email.send({
+// 	Host: "smtp.gmail.com",
+// 	Username : "trigger.superfluo@gmail.com",
+// 	Password : "piamose18",
+// 	To : 'gurki4.mm@gmail.com',
+// 	// To : mailTo.value,
+// 	From : "trigger@gmail.com",
+// 	Subject : "Your Order",
+//     Body : "<email body>",
+//     Attachments : [
+//         {
+//             name : "cane.jpg",
+//             path : "https://style.corriere.it/wp-content/uploads/2019/11/Gallery-4-Larivei.jpg"
+//         }]  
+// 	}).then(
+// 		message => console.log("mail sent to:" + mailTo.value)
+//     );
+// };

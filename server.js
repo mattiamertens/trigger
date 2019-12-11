@@ -60,14 +60,9 @@ function newConnection(socket){
     console.log('ciao: ' + socket.id);
 
     // Email sender function
-
-
-    // Calcio 1
-    socket.on('co_1', co_1);
-    function co_1(data){
-        console.log('oopop');
-        io.sockets.emit('r_co_1');
-        // socket.broadcast.emit('return-msg', data);
+    socket.on('mail_sender', mail_sender);
+    function mail_sender(data){
+        console.log('Mail sent');
         
         transporter.sendMail(mailOptions, function(err, data){
             if (err){
@@ -75,14 +70,53 @@ function newConnection(socket){
             }
             else{
                 console.log('yes daje');
-                alert('yes daje');
             }            
         });
+    }
+
+    // Calcio 1
+    socket.on('co_1', co_1);
+    function co_1(data){
+        console.log('oopop');
+        io.sockets.emit('r_co_1');
+        // socket.broadcast.emit('return-msg', data);
     }
 
     // Calcio 2
     socket.on('co_2', co_2);
     function co_2(data){
         io.sockets.emit('r_co_2');
+    }
+
+    // Calcio 3
+    socket.on('co_3', co_3);
+    function co_3(data){
+        io.sockets.emit('r_co_3');
+    }
+
+    // Calcio 4
+    socket.on('co_4', co_4);
+    function co_4(data){
+        io.sockets.emit('r_co_4');
+    }
+    // Calcio 5
+    socket.on('co_5', co_5);
+    function co_5(data){
+        io.sockets.emit('r_co_5');
+    }
+    // Calcio 6
+    socket.on('co_6', co_6);
+    function co_6(data){
+        io.sockets.emit('r_co_6');
+    }
+    // Calcio 7
+    socket.on('co_7', co_7);
+    function co_7(data){
+        io.sockets.emit('r_co_7');
+    }
+    // Calcio 8
+    socket.on('co_8', co_8);
+    function co_8(data){
+        io.sockets.emit('r_co_8');
     }
 };
