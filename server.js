@@ -160,6 +160,7 @@ function newConnection(socket){
         io.sockets.emit('r_ca_8');
     }
     
+
     // Grilletto 1
     socket.on('gr_1', gr_1);
     function gr_1(data){
@@ -199,5 +200,47 @@ function newConnection(socket){
     socket.on('gr_8', gr_8);
     function gr_8(data){
         io.sockets.emit('r_gr_8');
+    }
+    
+    
+    // Dettagli 1
+    socket.on('de_1', de_1);
+    function de_1(data){
+        io.sockets.emit('r_de_1');
+    }
+    // Dettagli 2
+    socket.on('de_2', de_2);
+    function de_2(data){
+        io.sockets.emit('r_de_2');
+    }
+    // Dettagli 3
+    socket.on('de_3', de_3);
+    function de_3(data){
+        io.sockets.emit('r_de_3');
+    }
+    // Dettagli 4
+    socket.on('de_4', de_4);
+    function de_4(data){
+        io.sockets.emit('r_de_4');
+    }
+    // Dettagli 5
+    socket.on('de_5', de_5);
+    function de_5(data){
+        io.sockets.emit('r_de_5');
+    }
+    // Dettagli 6
+    socket.on('de_6', de_6);
+    function de_6(data){
+        io.sockets.emit('r_de_6');
+    }
+    // Dettagli 7
+    socket.on('de_7', de_7);
+    function de_7(data){
+        io.sockets.emit('r_de_7');
+    }
+    // Dettagli 8
+    socket.on('de_8', de_8);
+    function de_8(data){
+        io.sockets.emit('r_de_8');
     }
 };

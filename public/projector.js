@@ -155,6 +155,39 @@ v_gr_8.addEventListener('click', function(){
     });
 });
 
+// Socket for dettagli
+v_de_1.addEventListener('click', function(){
+    socket.emit('de_1', {
+    });
+});
+v_de_2.addEventListener('click', function(){
+    socket.emit('de_2', {
+    });
+});
+v_de_3.addEventListener('click', function(){
+    socket.emit('de_3', {
+    });
+});
+v_de_4.addEventListener('click', function(){
+    socket.emit('de_4', {
+    });
+});
+v_de_5.addEventListener('click', function(){
+    socket.emit('de_5', {
+    });
+});
+v_de_6.addEventListener('click', function(){
+    socket.emit('de_6', {
+    });
+});
+v_de_7.addEventListener('click', function(){
+    socket.emit('de_7', {
+    });
+});
+v_de_8.addEventListener('click', function(){
+    socket.emit('de_8', {
+    });
+});
 
 
 // LISTENER FOR EVENTS
@@ -347,4 +380,68 @@ function gr_8(data){
     console.log('grilletto 8');
     $('.fuck_gr').addClass('projected');
     $('#grilletto').children('div').not('.fuck_gr').removeClass('projected'); // remove Class from other parts
+};
+
+
+
+//dettagli 1
+socket.on('r_de_1', de_1);
+function de_1(data){
+    console.log('dettagli 1');
+    $('.magenta_de').addClass('projected');
+    $('#dettagli').children('div').not('.magenta_de').removeClass('projected'); // remove Class from other parts
+};
+//dettagli 2
+socket.on('r_de_2', de_2);
+function de_2(data){
+    console.log('dettagli 2');
+    $('.calx_de').addClass('projected');
+    $('#dettagli').children('div').not('.calx_de').removeClass('projected'); // remove Class from other parts
+};
+//dettagli 3
+socket.on('r_de_3', de_3);
+function de_3(data){
+    console.log('dettagli 3');
+    $('.lime_de').addClass('projected');
+    $('#dettagli').children('div').not('.lime_de').removeClass('projected'); // remove Class from other parts
+};
+
+//dettagli 4
+socket.on('r_de_4', de_4);
+function de_4(data){
+    console.log('dettagli 4');
+    $('.extramarine_de').addClass('projected');
+    $('#dettagli').children('div').not('.extramarine_de').removeClass('projected'); // remove Class from other parts
+};
+
+//dettagli 5
+socket.on('r_de_5', de_5);
+function de_5(data){
+    console.log('dettagli 5');
+    $('.obsidian_de').addClass('projected');
+    $('#dettagli').children('div').not('.obsidian_de').removeClass('projected'); // remove Class from other parts
+};
+
+//dettagli 6
+socket.on('r_de_6', de_6);
+function de_6(data){
+    console.log('dettagli 6');
+    $('.white_de').addClass('projected');
+    $('#dettagli').children('div').not('.white_de').removeClass('projected'); // remove Class from other parts
+};
+
+//dettagli 7
+socket.on('r_de_7', de_7);
+function de_7(data){
+    console.log('dettagli 7');
+    $('.orange_de').addClass('projected');
+    $('#dettagli').children('div').not('.orange_de').removeClass('projected'); // remove Class from other parts
+};
+
+//dettagli 8
+socket.on('r_de_8', de_8);
+function de_8(data){
+    console.log('dettagli 8');
+    $('.fuck_de').addClass('projected');
+    $('#dettagli').children('div').not('.fuck_de').removeClass('projected'); // remove Class from other parts
 };
