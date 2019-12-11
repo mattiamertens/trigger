@@ -8,10 +8,9 @@ var cube;
 var manager = new THREE.LoadingManager();
 var strDownloadMime = "image/octet-stream";
 var mailTo = document.getElementById('mail');
+var dimensionsH = window.innerHeight / 2;
+var dimensionsW = window.innerWidth / 2;
 
-// SE VOGLIO CREARE UNA STANZA DI MERDA ATTIVO STO COSO SOTTO
-// var textureCube = new THREE.CubeTextureLoader().load(['json/envmap/posx.jpg', 'json/envmap/negx.jpg', 'json/envmap/posy.jpg', 'json/envmap/negy.jpg', 'json/envmap/posz.jpg', 'json/envmap/negz.jpg']);
-// textureCube.generateMipmaps = false;
 
 manager.onLoad = function () {
     scene.add(pistoluzza);
@@ -27,14 +26,14 @@ function init() {
         alpha: true,
         preserveDrawingBuffer: true
     });
-    renderer.setClearColor( 0xBFBFBF, 1 );
+    renderer.setClearColor( 0x000000, 1);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // CONTROLLO DELLA CAMERA
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.minDistance = 10;
-    controls.maxDistance = 65;
+    controls.minDistance = 30;
+    controls.maxDistance = 40;
     controls.enablePan = false;
     controls.enableDamping = true;
     controls.dampingFactor = 0.2;
@@ -69,7 +68,7 @@ function init() {
     // PISTOLUZZA
     // CALCIO
     var calcioloader = new THREE.GLTFLoader();
-    calcioloader.load( 'json/GLTF/calcio/calcio.gltf', function ( gltf ) {
+    calcioloader.load( '../json/GLTF/calcio/calcio.gltf', function ( gltf ) {
 
             calcioObj = gltf.scene;
             scene.add( calcioObj );
@@ -80,7 +79,7 @@ function init() {
 
     // CANNA
     var cannaloader = new THREE.GLTFLoader();
-    cannaloader.load( 'json/GLTF/canna/canna.gltf', function ( gltf ) {
+    cannaloader.load( '../json/GLTF/canna/canna.gltf', function ( gltf ) {
             
             cannaObj = gltf.scene;
             scene.add( cannaObj );
@@ -91,7 +90,7 @@ function init() {
 
     // GRILLETTO
     var calcioloader = new THREE.GLTFLoader();
-    calcioloader.load( 'json/GLTF/grilletto/grilletto.gltf', function ( gltf ) {
+    calcioloader.load( '../json/GLTF/grilletto/grilletto.gltf', function ( gltf ) {
 
             grillettoObj = gltf.scene;
             scene.add( grillettoObj );
@@ -101,7 +100,7 @@ function init() {
 
     // DETTAGLI
     var calcioloader = new THREE.GLTFLoader();
-    calcioloader.load( 'json/GLTF/dettagli/dettagli.gltf', function ( gltf ) {
+    calcioloader.load( '../json/GLTF/dettagli/dettagli.gltf', function ( gltf ) {
 
             dettagliObj = gltf.scene;
             scene.add( dettagliObj );
@@ -110,47 +109,26 @@ function init() {
     });
 
 
-    var saveLink = document.createElement('div');
-    saveLink.style.position = 'absolute';
-    saveLink.style.top = '10px';
-    saveLink.style.width = '100%';
-    saveLink.style.textAlign = 'center';
-    saveLink.innerHTML =
-        '<a href="#" id="saveLink">Save Frame</a>';
-    document.body.appendChild(saveLink);
+    // var saveLink = document.createElement('div');
+    // saveLink.style.position = 'absolute';
+    // saveLink.style.top = '10px';
+    // saveLink.style.width = '100%';
+    // saveLink.style.textAlign = 'center';
+    // saveLink.innerHTML =
+    //     '<a href="#" id="saveLink">Save Frame</a>';
+    // document.body.appendChild(saveLink);
 
-    document.getElementById("saveLink").addEventListener('click', saveAsImage);
+    // document.getElementById("saveLink").addEventListener('click', saveAsImage);
     
 
-    //CALCIO EVIDENZIATO
-    $(".calcio").click(function setHighlightTexture() {
-        // var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        
-        var newTexture = textureLoader.load( "json/GLTF/textures/grey.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
     
-        calcioObj.traverse( function ( child ) { 
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
     //CALCIO
     $("#colors_co").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_c.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -168,12 +146,11 @@ function init() {
     });
     //CALCIO TEXTURES
     $("#textures_co").children('div').click(function setAnotherTexture() {
-        alert('si si')
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -190,35 +167,14 @@ function init() {
         });
     });
 
-    // CANNA EVIDENZIATA
-    $(".canna").click(function setHighlightTexture() {
-        // var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        
-        var newTexture = textureLoader.load( "json/GLTF/textures/grey.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        cannaObj.traverse( function ( child ) { 
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
 
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
     //CANNA
     $("#colors_ca").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_c.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -241,7 +197,7 @@ function init() {
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -259,96 +215,14 @@ function init() {
     });
 
 
-    // GRILLETTO EVIDENZIATO
-    $(".grilletto").click(function setHighlightTexture() {
-        // var textureColor = this.className;
-        var textureLoader = new THREE.TextureLoader();
-        
-        var newTexture = textureLoader.load( "json/GLTF/textures/grey.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        grillettoObj.traverse( function ( child ) { 
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    // }).click(function removeTexture() {
-    //     // prova per eliminare //
-        
-    //     var textureRemover = new THREE.TextureLoader();
-
-    //     var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-    //     removeTexture.encoding = THREE.sRGBEncoding;
-    //     removeTexture.flipY = false;
-    
-    //     cannaObj.traverse( function ( child ) { 
-            
-    //         if (child instanceof THREE.Mesh) {
-    //             //create a global var to reference later when changing textures
-    //             //apply texture
-
-    //             child.material.map = removeTexture;
-    //             child.material.needsUpdate = true;
-    //             child.material.map.needsUpdate = true;
-    //         }
-    // });
-    // })
-    // .click(function removeTexture() {
-    //         // prova per eliminare //
-            
-    //         var textureRemover = new THREE.TextureLoader();
-
-    //         var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-    //         removeTexture.encoding = THREE.sRGBEncoding;
-    //         removeTexture.flipY = false;
-        
-    //         calcioObj.traverse( function ( child ) { 
-                
-    //             if (child instanceof THREE.Mesh) {
-    //                 //create a global var to reference later when changing textures
-    //                 //apply texture
-
-    //                 child.material.map = removeTexture;
-    //                 child.material.needsUpdate = true;
-    //                 child.material.map.needsUpdate = true;
-    //             }
-    //     });
-    // })
-    // .click(function removeTexture() {
-    //         // prova per eliminare //
-            
-    //         var textureRemover = new THREE.TextureLoader();
-
-    //         var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-    //         removeTexture.encoding = THREE.sRGBEncoding;
-    //         removeTexture.flipY = false;
-        
-    //         dettagliObj.traverse( function ( child ) { 
-                
-    //             if (child instanceof THREE.Mesh) {
-    //                 //create a global var to reference later when changing textures
-    //                 //apply texture
-
-    //                 child.material.map = removeTexture;
-    //                 child.material.needsUpdate = true;
-    //                 child.material.map.needsUpdate = true;
-    //             }
-    //     });
-    });
+   
     //GRILLETTO
     $("#colors_gr").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_c.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -370,7 +244,7 @@ function init() {
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -387,93 +261,6 @@ function init() {
         });
     });
 
-
-    // DETTAGLI EVIDENZIATI
-    $(".dettagli").click(function setHighlightTexture() {
-        // var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        
-        var newTexture = textureLoader.load( "json/GLTF/textures/grey.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        dettagliObj.traverse( function ( child ) { 
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    })
-    // .click(function removeTexture() {
-    //         // prova per eliminare //
-            
-    //         var textureRemover = new THREE.TextureLoader();
-
-    //         var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-    //         removeTexture.encoding = THREE.sRGBEncoding;
-    //         removeTexture.flipY = false;
-        
-    //         cannaObj.traverse( function ( child ) { 
-                
-    //             if (child instanceof THREE.Mesh) {
-    //                 //create a global var to reference later when changing textures
-    //                 //apply texture
-    
-    //                 child.material.map = removeTexture;
-    //                 child.material.needsUpdate = true;
-    //                 child.material.map.needsUpdate = true;
-    //             }
-    //     });
-    // })
-    // .click(function removeTexture() {
-    //         // prova per eliminare //
-            
-    //         var textureRemover = new THREE.TextureLoader();
-
-    //         var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-    //         removeTexture.encoding = THREE.sRGBEncoding;
-    //         removeTexture.flipY = false;
-        
-    //         calcioObj.traverse( function ( child ) { 
-                
-    //             if (child instanceof THREE.Mesh) {
-    //                 //create a global var to reference later when changing textures
-    //                 //apply texture
-    
-    //                 child.material.map = removeTexture;
-    //                 child.material.needsUpdate = true;
-    //                 child.material.map.needsUpdate = true;
-    //             }
-    //     });
-    // })
-    // .click(function removeTexture() {
-            // prova per eliminare //
-            
-        //     var textureRemover = new THREE.TextureLoader();
-
-        //     var removeTexture = textureRemover.load( "json/GLTF/textures/00000 placeholder (1_t).png");
-        //     removeTexture.encoding = THREE.sRGBEncoding;
-        //     removeTexture.flipY = false;
-        
-        //     grillettoObj.traverse( function ( child ) { 
-                
-        //         if (child instanceof THREE.Mesh) {
-        //             //create a global var to reference later when changing textures
-        //             //apply texture
-    
-        //             child.material.map = removeTexture;
-        //             child.material.needsUpdate = true;
-        //             child.material.map.needsUpdate = true;
-        //         }
-        // });
-    // })
-    ;
         
     //DETTAGLI
     $("#colors_de").children('div').click(function setAnotherTexture() {
@@ -481,7 +268,7 @@ function init() {
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_c.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -504,7 +291,7 @@ function init() {
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         
-        var newTexture = textureLoader.load( "json/GLTF/textures/" + textureColor + "_t.png");
+        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
         newTexture.flipY = false;
     
@@ -544,8 +331,8 @@ animate();
 
 
 $(window).resize(function () {
-    SCREEN_WIDTH = window.innerWidth / 100 * 40;
-    SCREEN_HEIGHT = window.innerHeight / 100 * 80;
+    SCREEN_WIDTH = dimensionsW;
+    SCREEN_HEIGHT = dimensionsH;
     camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
     camera.updateProjectionMatrix();
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -584,63 +371,10 @@ var saveFile = function (strData, filename) {
 }
 
 
-/// JQUERY CODE ///
-$(document).ready(function() { 
-    $('.dettagli').addClass('selected');
- });
-$('.calcio').on("click", function(){
-    $("#colors_co, #textures_co").addClass('top'); // aggiugnere class TOP
-    $(this).addClass('selected');
-    
-    $("#colors_ca, #colors_gr, #colors_de, #textures_ca, #textures_gr, #textures_de").removeClass('top');
-    $(".canna, .grilletto, .dettagli").removeClass('selected');
-});
-
-$('.canna').on("click", function(){
-    $("#colors_ca, #textures_ca").addClass('top');  // aggiugnere class TOP
-    $(this).addClass('selected');
-
-    $("#colors_co, #colors_gr, #colors_de, #textures_co, #textures_gr, #textures_de").removeClass('top');
-    $(".calcio, .grilletto, .dettagli").removeClass('selected');
-});
-
-$('.grilletto').on("click", function(){
-    $("#colors_gr, #textures_gr").addClass('top'); // aggiugnere class TOP
-    $(this).addClass('selected');
-    
-    $("#colors_ca, #colors_co, #colors_de, #textures_ca, #textures_co, #textures_de").removeClass('top');
-    $(".canna, .calcio, .dettagli").removeClass('selected');
-});
-
-$('.dettagli').on("click", function(){
-    $("#colors_de, #textures_de").addClass('top'); // aggiugnere class TOP
-    $(this).addClass('selected');
-
-    $("#colors_ca, #colors_gr, #colors_co, #textures_ca, #textures_gr, #textures_co").removeClass('top');
-    $(".canna, .grilletto, .calcio").removeClass('selected');
-});
-
-
-
-$(".palette").on('click', function(){
-    $('.color_wrapper').addClass('visibility');
-    // $('.color_wrapper').animate({top: '2%'}).fadeIn(1);
-
-
-    $('.navbar, #container, .components').toggleClass('blur');
-});
-$(".close").on('click', function(){
-    $('.color_wrapper').removeClass('visibility');
-    // $('.color_wrapper').animate({top: '102%'}).fadeOut();
-    $('.navbar, #container, .components').toggleClass('blur');
-});
-
-
 
 /// SMTP MAILER /// 
 // var counter = 0;  // need to increase counter every click
 // var localPath = "/../" + counter + ".png" ;
-
 
 function sendEmail() {
 	Email.send({
@@ -661,5 +395,3 @@ function sendEmail() {
 		message => console.log("mail sent to:" + mailTo.value)
     );
 };
-
-
