@@ -116,6 +116,46 @@ function newConnection(socket){
     function co_8(data){
         io.sockets.emit('r_co_8');
     }
+    // Calcio T 1
+    socket.on('tco_1', tco_1);
+    function tco_1(data){
+        io.sockets.emit('r_tco_1');
+    }
+    // Calcio T 2
+    socket.on('tco_2', tco_2);
+    function tco_2(data){
+        io.sockets.emit('r_tco_2');
+    }
+    // Calcio T 3
+    socket.on('tco_3', tco_3);
+    function tco_3(data){
+        io.sockets.emit('r_tco_3');
+    }
+    // Calcio T 4
+    socket.on('tco_4', tco_4);
+    function tco_4(data){
+        io.sockets.emit('r_tco_4');
+    }
+    // Calcio T 5
+    socket.on('tco_5', tco_5);
+    function tco_5(data){
+        io.sockets.emit('r_tco_5');
+    }
+    // Calcio T 6
+    socket.on('tco_6', tco_6);
+    function tco_6(data){
+        io.sockets.emit('r_tco_6');
+    }
+    // Calcio T 7
+    socket.on('tco_7', tco_7);
+    function tco_7(data){
+        io.sockets.emit('r_tco_7');
+    }
+    // Calcio T 8
+    socket.on('tco_8', tco_8);
+    function tco_8(data){
+        io.sockets.emit('r_tco_8');
+    }
 
 
     // Canna 1
@@ -158,6 +198,48 @@ function newConnection(socket){
     socket.on('ca_8', ca_8);
     function ca_8(data){
         io.sockets.emit('r_ca_8');
+    }
+
+    // Canna T 1
+    socket.on('tca_1', tca_1);
+    function tca_1(data){
+        console.log('insomma?')
+        io.sockets.emit('r_tca_1');
+    }
+    // Canna T 2
+    socket.on('tca_2', tca_2);
+    function tca_2(data){
+        io.sockets.emit('r_tca_2');
+    }
+    // Canna T 3
+    socket.on('tca_3', tca_3);
+    function tca_3(data){
+        io.sockets.emit('r_tca_3');
+    }
+    // Canna T 4
+    socket.on('tca_4', tca_4);
+    function tca_4(data){
+        io.sockets.emit('r_tca_4');
+    }
+    // Canna T 5
+    socket.on('tca_5', tca_5);
+    function tca_5(data){
+        io.sockets.emit('r_tca_5');
+    }
+    // Canna T 6
+    socket.on('tca_6', tca_6);
+    function tca_6(data){
+        io.sockets.emit('r_tca_6');
+    }
+    // Canna T 7
+    socket.on('tca_7', tca_7);
+    function tca_7(data){
+        io.sockets.emit('r_tca_7');
+    }
+    // Canna T 8
+    socket.on('tca_8', tca_8);
+    function tca_8(data){
+        io.sockets.emit('r_tca_8');
     }
     
 

@@ -4,7 +4,7 @@ socket = io.connect('http://localhost:3000');
 var mail_trigger = document.getElementsByClassName('email')[0]; // send email via form
 var message = document.getElementsByClassName('done')[0]; // non mi ricordo a cosa serva
 
-// VAR for sockets CALCIO
+// VAR for sockets
 var v_co_1 = document.getElementsByClassName('magenta')[0],
     v_ca_1 = document.getElementsByClassName('magenta')[1],
     v_gr_1 = document.getElementsByClassName('magenta')[2],
@@ -44,6 +44,31 @@ var v_co_8 = document.getElementsByClassName('fuck')[0],
     v_ca_8 = document.getElementsByClassName('fuck')[1],
     v_gr_8 = document.getElementsByClassName('fuck')[2],
     v_de_8 = document.getElementsByClassName('fuck')[3];
+
+// Texture VAR
+var v_tco_1 = document.getElementsByClassName('t_1')[0],
+    v_tca_1 = document.getElementsByClassName('t_1')[1];
+
+var v_tco_2 = document.getElementsByClassName('t_2')[0],
+    v_tca_2 = document.getElementsByClassName('t_2')[1];
+
+var v_tco_3 = document.getElementsByClassName('t_3')[0],
+    v_tca_3 = document.getElementsByClassName('t_3')[1];
+
+var v_tco_4 = document.getElementsByClassName('t_4')[0],
+    v_tca_4 = document.getElementsByClassName('t_4')[1];
+
+var v_tco_5 = document.getElementsByClassName('t_5')[0],
+    v_tca_5 = document.getElementsByClassName('t_5')[1];
+
+var v_tco_6 = document.getElementsByClassName('t_6')[0],
+    v_tca_6 = document.getElementsByClassName('t_6')[1];
+
+var v_tco_7 = document.getElementsByClassName('t_7')[0],
+    v_tca_7 = document.getElementsByClassName('t_7')[1];
+
+var v_tco_8 = document.getElementsByClassName('t_8')[0],
+    v_tca_8 = document.getElementsByClassName('t_8')[1];
 
 
 // send email via form
@@ -85,6 +110,38 @@ v_co_8.addEventListener('click', function(){
     socket.emit('co_8', {
     });
 });
+v_tco_1.addEventListener('click', function(){
+    socket.emit('tco_1', {
+    });
+});
+v_tco_2.addEventListener('click', function(){
+    socket.emit('tco_2', {
+    });
+});
+v_tco_3.addEventListener('click', function(){
+    socket.emit('tco_3', {
+    });
+});
+v_tco_4.addEventListener('click', function(){
+    socket.emit('tco_4', {
+    });
+});
+v_tco_5.addEventListener('click', function(){
+    socket.emit('tco_5', {
+    });
+});
+v_tco_6.addEventListener('click', function(){
+    socket.emit('tco_6', {
+    });
+});
+v_tco_7.addEventListener('click', function(){
+    socket.emit('tco_7', {
+    });
+});
+v_tco_8.addEventListener('click', function(){
+    socket.emit('tco_8', {
+    });
+});
 
 // Socket for canna
 v_ca_1.addEventListener('click', function(){
@@ -117,6 +174,38 @@ v_ca_7.addEventListener('click', function(){
 });
 v_ca_8.addEventListener('click', function(){
     socket.emit('ca_8', {
+    });
+});
+v_tca_1.addEventListener('click', function(){
+    socket.emit('tca_1', {
+    });
+});
+v_tca_2.addEventListener('click', function(){
+    socket.emit('tca_2', {
+    });
+});
+v_tca_3.addEventListener('click', function(){
+    socket.emit('tca_3', {
+    });
+});
+v_tca_4.addEventListener('click', function(){
+    socket.emit('tca_4', {
+    });
+});
+v_tca_5.addEventListener('click', function(){
+    socket.emit('tca_5', {
+    });
+});
+v_tca_6.addEventListener('click', function(){
+    socket.emit('tca_6', {
+    });
+});
+v_tca_7.addEventListener('click', function(){
+    socket.emit('tca_7', {
+    });
+});
+v_tca_8.addEventListener('click', function(){
+    socket.emit('tca_8', {
     });
 });
 
@@ -255,6 +344,70 @@ function co_8(data){
     $('#calcio').children('div').not('.fuck_co').removeClass('projected'); // remove Class from other parts
 };
 
+//Calcio T 1
+socket.on('r_tco_1', tco_1);
+function tco_1(data){
+    console.log('calcio T 1');
+    $('.t_1_co').addClass('projected');
+    $('#calcio').children('div').not('.t_1_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 2
+socket.on('r_tco_2', tco_2);
+function tco_2(data){
+    console.log('calcio T 2');
+    $('.t_2_co').addClass('projected');
+    $('#calcio').children('div').not('.t_2_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 3
+socket.on('r_tco_3', tco_3);
+function tco_3(data){
+    console.log('calcio T 3');
+    $('.t_3_co').addClass('projected');
+    $('#calcio').children('div').not('.t_3_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 4
+socket.on('r_tco_4', tco_4);
+function tco_4(data){
+    console.log('calcio T 4');
+    $('.t_4_co').addClass('projected');
+    $('#calcio').children('div').not('.t_4_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 5
+socket.on('r_tco_5', tco_5);
+function tco_5(data){
+    console.log('calcio T 5');
+    $('.t_5_co').addClass('projected');
+    $('#calcio').children('div').not('.t_5_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 6
+socket.on('r_tco_6', tco_6);
+function tco_6(data){
+    console.log('calcio T 6');
+    $('.t_6_co').addClass('projected');
+    $('#calcio').children('div').not('.t_6_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 7
+socket.on('r_tco_7', tco_7);
+function tco_7(data){
+    console.log('calcio T 7');
+    $('.t_7_co').addClass('projected');
+    $('#calcio').children('div').not('.t_7_co').removeClass('projected'); // remove Class from other parts
+};
+
+//Calcio T 8
+socket.on('r_tco_8', tco_8);
+function tco_8(data){
+    console.log('calcio T 8');
+    $('.t_8_co').addClass('projected');
+    $('#calcio').children('div').not('.t_8_co').removeClass('projected'); // remove Class from other parts
+};
+
 
 //Canna 1
 socket.on('r_ca_1', ca_1);
@@ -316,6 +469,70 @@ function ca_8(data){
     console.log('canna 8');
     $('.fuck_ca').addClass('projected');
     $('#canna').children('div').not('.fuck_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 1
+socket.on('r_tca_1', tca_1);
+function tca_1(data){
+    console.log('canna T 1');
+    $('.t_1_ca').addClass('projected');
+    $('#canna').children('div').not('.t_1_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 2
+socket.on('r_tca_2', tca_2);
+function tca_2(data){
+    console.log('canna T 2');
+    $('.t_2_ca').addClass('projected');
+    $('#canna').children('div').not('.t_2_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 3
+socket.on('r_tca_3', tca_3);
+function tca_3(data){
+    console.log('canna T 3');
+    $('.t_3_ca').addClass('projected');
+    $('#canna').children('div').not('.t_3_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 4
+socket.on('r_tca_4', tca_4);
+function tca_4(data){
+    console.log('canna T 4');
+    $('.t_4_ca').addClass('projected');
+    $('#canna').children('div').not('.t_4_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 5
+socket.on('r_tca_5', tca_5);
+function tca_5(data){
+    console.log('canna T 5');
+    $('.t_5_ca').addClass('projected');
+    $('#canna').children('div').not('.t_5_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 6
+socket.on('r_tca_6', tca_6);
+function tca_6(data){
+    console.log('canna T 6');
+    $('.t_6_ca').addClass('projected');
+    $('#canna').children('div').not('.t_6_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 7
+socket.on('r_tca_7', tca_7);
+function tca_7(data){
+    console.log('canna T 7');
+    $('.t_7_ca').addClass('projected');
+    $('#canna').children('div').not('.t_7_ca').removeClass('projected'); // remove Class from other parts
+};
+
+//Canna T 8
+socket.on('r_tca_8', tca_8);
+function tca_8(data){
+    console.log('canna T 8');
+    $('.t_8_ca').addClass('projected');
+    $('#canna').children('div').not('.t_8_ca').removeClass('projected'); // remove Class from other parts
 };
 
 
