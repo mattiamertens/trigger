@@ -237,7 +237,6 @@ input{
 	height: 30px;
 	line-height: 30px;
 }
-
 .color_palette{
 	width: 100%;
 	height: auto;
@@ -248,7 +247,6 @@ input{
 	justify-content: space-evenly;
 	overflow: scroll;
 }
-
 .color_palette div{
 	height: 320px;
 	width: 260px;
@@ -288,6 +286,35 @@ input{
 .fuck{
 	background-color: #ff0066;
 }
+.t_1{
+	background-image: url('../public/json/assets/calcio/texture1.png');
+}
+.t_2{
+	background-image: url('../public/json/assets/calcio/texture2.png');
+}
+.t_3{
+	background-image: url('../public/json/assets/calcio/texture3.png');
+}
+.t_4{
+	background-image: url('../public/json/assets/calcio/texture4.png');
+}
+.t_5{
+	background-image: url('../public/json/assets/calcio/texture5.png');
+}
+.t_6{
+	background-image: url('../public/json/assets/calcio/texture6.png');
+}
+.t_7{
+	background-image: url('../public/json/assets/calcio/texture7.png');
+}
+.t_8{
+	background-image: url('../public/json/assets/calcio/texture8.png');
+}
+
+
+
+
+
 
 /* ABOUT US */
 .animated_txt{
