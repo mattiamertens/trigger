@@ -318,7 +318,7 @@ input{
 
 /* ABOUT US */
 .animated_txt{
-	position: absolute;
+	position: relative;
 	width: 100%;
 	top: 92px;
 	color: white;
@@ -333,4 +333,125 @@ input{
 .outline{
 	-webkit-text-stroke: 1px white;
 	-webkit-text-fill-color: black;
+}
+.video{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+
+ /* Photo section  */
+.photo_wrapper{
+	position: relative;
+	top: 1100px;
+	color: white;
+	font-family: BRRR, sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.photo_1{
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-color: blueviolet;
+}
+.outline_txt{
+	position: absolute;
+	font-size: 27px;
+	width: 500px;
+	-webkit-text-stroke: 1px white;
+	-webkit-text-fill-color: black;
+}
+.parameters{
+	position: absolute;
+	line-height: 30px;
+	width: 200px;
+}
+.ph_1{
+	position: absolute;
+	width: 340px;
+	height: 510px;
+	background-color: yellow;
+	left: 45%;
+}
+.ph_2{
+	position: absolute;
+	width: 250px;
+	height: 370px;
+	background-color: red;
+	left: 32%;
+	top: 35%
+}
+.txt_1{
+	top: 62%;
+	left: 65%;
+}
+.txt_2{
+	top: 85%;
+	left: 57%;
+}
+
+.photo_2{
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-color: yellowgreen;
+}
+.ph_3{
+	position: absolute;
+	width: 340px;
+	height: 510px;
+	background-color: yellow;
+	left: 32%;
+	top: 10%
+}
+.ph_4{
+	position: absolute;
+	width: 250px;
+	height: 370px;
+	background-color: red;
+	left: 55%;
+	top: 13%
+}
+.txt_3{
+	top: 6%;
+	left: 28%;
+}
+.txt_4{
+	top: 85%;
+	left: 28%;
+}
+
+.photo_3{
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-color: green;
+}
+.ph_5{
+	position: absolute;
+	width: 400px;
+	height: 600px;
+	background-color: yellow;
+	left: 20%;
+	top: 7%
+}
+.ph_6{
+	position: absolute;
+	width: 400px;
+	height: 600px;
+	background-color: red;
+	left: 50%;
+	top: 7%
+}
+
+.photo_4{
+	position: relative;
+	width: 100%;
+	height: 850px;
+	background-color: blue;
 }

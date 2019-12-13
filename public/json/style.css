@@ -1,15 +1,18 @@
 .fake_elements{
     display: none;
 }
+body{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
 
 .png-container{
-    width: 1366px;
-    height: 1024px;
+    height: 100%;
+    width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+    display: flex;
+    flex-wrap: wrap;
 }
 .png-container > * {
     width: 100%;
@@ -23,10 +26,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: contain;
-    opacity: 0;
+    opacity: 0;    
     background-size: cover;
-    
 }
 
 /* CALCIO */
@@ -145,9 +146,9 @@
 .orange_gr{
     background-image: url('assets/grilletto/orange.png');
 }
-/* .calx_gr{
+.calx_gr{
     background-image: url('assets/grilletto/calx.png');
-} */
+}
 .white_gr{
     background-image: url('assets/grilletto/pseudowhite.png');
 }
