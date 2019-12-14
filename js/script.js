@@ -15,9 +15,12 @@ $('.dettagli').on("click", function(){
 });
 
 
-// PALETTE SHOW / HIDE
-$(".palette").on('click', function(){
+// PALETTE SHOW - HIDE
+$(".calcio, .canna, .grilletto, .dettagli").on('click', function(){
+    console.log('cazzo');
     $('.color_wrapper').addClass('visibility');
+    
+    $(document.body).addClass('anti-scroll');
 });
 
 $(".close, .close_txt").on('click', function(){

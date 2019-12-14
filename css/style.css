@@ -200,7 +200,7 @@ input{
 .color_wrapper{
 	z-index: -1; 
 	width: 94%;
-	height: 98%;
+	height: 92%;
 	position: absolute;
 	left: 3%;
 	top: 102%;
@@ -212,11 +212,12 @@ input{
 /* COLOR PALETTE VISIBILITY */
 .visibility{
 	z-index: 10;
+	overflow: scroll;
 	animation: vis 0.8s cubic-bezier(.8, 0, .2, 1) forwards;
 }
 @keyframes vis {
     from{ transform: translate(0, 0); }
-    to { transform: translate(0, -95%); }
+    to { transform: translate(0, -101%); }
 }
 
 /* CLOSE COLOR PALETTE */
@@ -248,18 +249,21 @@ input{
 	overflow: scroll;
 }
 .color_palette div{
-	height: 320px;
+	height: 300px;
 	width: 260px;
-	margin: 10px 0 50px 0;
+	margin: 15px 0 50px 0;
 }
 .color_palette div p {
 	position: relative;
 	color: white;
-	top: 330px;
+	top: 305px;
 }
 
 .top{
 	z-index: 100;
+}
+.anti-scroll{
+	overflow: hidden;
 }
 
 .magenta{
@@ -353,11 +357,10 @@ input{
 	display: flex;
 	flex-wrap: wrap;
 }
-.photo_1{
+.photo_container{
 	position: relative;
 	width: 100%;
 	height: 850px;
-	background-color: blueviolet;
 }
 .outline_txt{
 	position: absolute;
@@ -375,7 +378,7 @@ input{
 	position: absolute;
 	width: 340px;
 	height: 510px;
-	background-color: yellow;
+	background-size: contain;
 	left: 45%;
 }
 .ph_2{
@@ -393,13 +396,6 @@ input{
 .txt_2{
 	top: 85%;
 	left: 57%;
-}
-
-.photo_2{
-	position: relative;
-	width: 100%;
-	height: 850px;
-	background-color: yellowgreen;
 }
 .ph_3{
 	position: absolute;
@@ -425,18 +421,12 @@ input{
 	top: 85%;
 	left: 28%;
 }
-
-.photo_3{
-	position: relative;
-	width: 100%;
-	height: 850px;
-	background-color: green;
-}
 .ph_5{
 	position: absolute;
 	width: 400px;
 	height: 600px;
-	background-color: yellow;
+	background-image: url('../public/json/assets/about_us/pics/allas1.gif');
+	background-size: cover;
 	left: 20%;
 	top: 7%
 }
@@ -444,14 +434,24 @@ input{
 	position: absolute;
 	width: 400px;
 	height: 600px;
+	background-image: url('../public/json/assets/about_us/pics/allas.jpg');
+	background-size: cover;
+	left: 50%;
+	top: 7%
+}
+.ph_7{
+	position: absolute;
+	width: 270px;
+	height: 360px;
 	background-color: red;
 	left: 50%;
 	top: 7%
 }
-
-.photo_4{
-	position: relative;
-	width: 100%;
-	height: 850px;
-	background-color: blue;
+.ph_8{
+	position: absolute;
+	width: 320px;
+	height: 480px;
+	background-color: white;
+	left: 29%;
+	top: 20%
 }
