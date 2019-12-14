@@ -77,9 +77,10 @@ a {
 
 .wrapper{
 	display: flex;
-	height: 100%;
+	height: calc(100% - 92px);
 	width: 100%;
 	position: absolute;
+	top: 92px;
 	background-color: red;
 }
 
@@ -90,59 +91,79 @@ a {
 }
 
 .side-column{
-	position: relative;
-	top: 92px;
+	position: relative;	
 	width: 100%;
 	height: 100%;
-	background-color: cyan;
+	background-color: black;
+	font-family: BRRR, sans-serif;
+	font-weight: 500;
 }
-.side-column > div{
-	height: 311px;
+
+.link{
+	position: relative;
+	width: 100%;
+	text-align: end;
+	left: -7%;
+	top: 6%;
+	font-size: 40px;
+	z-index: 2;
+}
+.related{
+	width: 46.6%;
+	height: 74.1%;
+	position: relative;
+	left: 44%; 
+	background-size: contain;
+	
+}
+.r_pic1{
+	background-image: url('../public/json/assets/home/icons.png');
+	background-repeat: no-repeat;
+}
+.r_pic2{
+	background-image: url('../public/json/assets/home/about_us.png');
+	background-size: cover;
+}
+.r_pic3{
+	background-image: url('../public/json/assets/home/about_us.png');
+	background-repeat: no-repeat;
+}
+.arrow{
+	width: 39px;
+	height: 13px;
+	position: absolute;
+	top: 85%;
+	right: 8%;
+	background-size: contain;
+	background-image: url('../public/json/assets/home/arrow.png');
 }
 
 #icons{
-	background-color: burlywood;
-	height: 311px;
+	height: 33.33%;
 }
 #about{
-	background-color: #fff;
-	height: 311px;
+	height: 33.33%;
+	border: 1px solid white;
 }
 #project{
-	background-color: black;
-	height: 311px;
+	height: 33.33%;
 }
 
-/* CANVAS */
-.wrapper_cont{
-	position: absolute;
-	background-color: black;
-	height: 100%;
-	width: 100%;
-	top: 100%;
-}
-#container {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	top: 20%;
-}
 
 /* CUSTOMISE_1 RULES */
 .components_wrapper{
 	position: absolute;
 	top: 92px;
-	height: 932px;
+	height: calc(100% - 92px);
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 }
 .components_wrapper > div{
-	width: 679px;
-	height: 49.5%;
+	width: 49.8%;
+	height: 49.8%;
 	background-color: black;
-	border: 2px solid #00ff00;
+	border: 1px solid white;
 }
 .calcio{
 	background-image: url('../public/json/assets/img/calcio.png');
@@ -194,6 +215,22 @@ input{
 	width: 400px;
 	left: -20%;
 	font-size: 20px;
+}
+
+/* CANVAS */
+.wrapper_cont{
+	position: absolute;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	top: 100%;
+}
+#container {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	top: 20%;
 }
 
 /* PALETTE SELECTOR */
@@ -317,9 +354,6 @@ input{
 
 
 
-
-
-
 /* ABOUT US */
 .animated_txt{
 	position: relative;
@@ -327,11 +361,10 @@ input{
 	top: 92px;
 	color: white;
 	font-family: BRRR, sans-serif;
-	font-weight: 500;
 	font-size: 170px;
 	line-height: 95%;
 	max-width: 5000px;
-    overflow-x: hidden;
+    overflow: hidden;
     white-space: nowrap;
 }
 .outline{
@@ -372,21 +405,26 @@ input{
 .parameters{
 	position: absolute;
 	line-height: 30px;
-	width: 200px;
+	width: 300px;
 }
-.ph_1{
+.about_pic{
 	position: absolute;
+	background-size: contain;
+}
+
+/* FIRST PHOTO CONTAINER */
+.ph_1{
 	width: 340px;
 	height: 510px;
-	background-size: contain;
-	left: 45%;
+	left: 46%;
+	background-image: url('../public/json/assets/about_us/pics/meani_bianca.png');
+	z-index: 1;
 }
 .ph_2{
-	position: absolute;
 	width: 250px;
 	height: 370px;
-	background-color: red;
-	left: 32%;
+	background-image: url('../public/json/assets/about_us/pics/mea.png');
+	left: 30%;
 	top: 35%
 }
 .txt_1{
@@ -397,19 +435,19 @@ input{
 	top: 85%;
 	left: 57%;
 }
+
+/* SECOND PHOTO CONTAINER */
 .ph_3{
-	position: absolute;
 	width: 340px;
 	height: 510px;
-	background-color: yellow;
+	background-image: url('../public/json/assets/about_us/pics/in_3.png');
 	left: 32%;
 	top: 10%
 }
 .ph_4{
-	position: absolute;
 	width: 250px;
 	height: 370px;
-	background-color: red;
+	background-image: url('../public/json/assets/about_us/pics/bianca.png');
 	left: 55%;
 	top: 13%
 }
@@ -421,8 +459,9 @@ input{
 	top: 85%;
 	left: 28%;
 }
+
+/* THIRD PHOTO CONTAINER */
 .ph_5{
-	position: absolute;
 	width: 400px;
 	height: 600px;
 	background-image: url('../public/json/assets/about_us/pics/allas1.gif');
@@ -431,7 +470,6 @@ input{
 	top: 7%
 }
 .ph_6{
-	position: absolute;
 	width: 400px;
 	height: 600px;
 	background-image: url('../public/json/assets/about_us/pics/allas.jpg');
@@ -439,19 +477,36 @@ input{
 	left: 50%;
 	top: 7%
 }
-.ph_7{
-	position: absolute;
-	width: 270px;
-	height: 360px;
-	background-color: red;
+.txt_5{
+	top: 3%;
+	left: 70%;
+}
+.txt_6{
+	top: 86%;
 	left: 50%;
-	top: 7%
+}
+
+/* FOURTH PHOTO CONTAINER */
+.ph_7{
+	background-image: url('../public/json/assets/about_us/pics/allas_seduto.png');
+	background-size: cover;
+	width: 250px;
+	height: 360px;
+	left: 50%;
+	top: 7%;
 }
 .ph_8{
-	position: absolute;
+	background-image: url('../public/json/assets/about_us/pics/allas_bianca.png');
 	width: 320px;
 	height: 480px;
-	background-color: white;
 	left: 29%;
-	top: 20%
+	top: 30%
+}
+.txt_7{
+	top: 8%;
+	left: 43%;
+}
+.txt_8{
+	top: 90%;
+	left: 53%;
 }
