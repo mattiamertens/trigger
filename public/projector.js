@@ -1,5 +1,5 @@
 var socket;
-socket = io.connect('http://localhost:3000');
+socket = io.connect('192.168.1.75:3000');
 
 var mail_trigger = document.getElementsByClassName('email')[0]; // send email via form
 var message = document.getElementsByClassName('done')[0]; // non mi ricordo a cosa serva

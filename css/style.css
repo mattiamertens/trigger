@@ -28,9 +28,9 @@
 }
 
 body {
-	font-family: neue-haas-unica, sans-serif;
+	font-family: BRRR, sans-serif;
 	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
-	font-style: normal;
+	color: white;
     margin: 0px;
 	font-size: 20px;
 	background-color: black;
@@ -50,9 +50,6 @@ a {
 }
 .home{
 	position: absolute;
-	font-family: BRRR, sans-serif;
-	font-weight: 500; /* weight = 500 (medium) - 400 (normal) - 600 (bold) */
-	font-style: normal;
 	font-size: 40px;
 	left: 20px;
 	
@@ -60,7 +57,8 @@ a {
 .sections{
 	position: absolute;
 	left: 54%;
-
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
 }
 .sections > a:nth-child(2){
 	position: relative;
@@ -81,7 +79,6 @@ a {
 	width: 100%;
 	position: absolute;
 	top: 92px;
-	background-color: red;
 }
 
 #customiser{
@@ -94,9 +91,6 @@ a {
 	position: relative;	
 	width: 100%;
 	height: 100%;
-	background-color: black;
-	font-family: BRRR, sans-serif;
-	font-weight: 500;
 }
 
 .link{
@@ -162,7 +156,6 @@ a {
 .components_wrapper > div{
 	width: 49.8%;
 	height: 49.8%;
-	background-color: black;
 	border: 1px solid white;
 }
 .calcio{
@@ -189,6 +182,8 @@ a {
 	color: black;
 	background-color: #00ff00;
 	border: 2px solid #00ff00;
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
 }
 .done{
 	position: absolute;
@@ -243,7 +238,8 @@ input{
 	top: 102%;
 	background-color:rgba(29,29,27,0.6);
 	overflow: scroll;
-
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
 }
 
 /* COLOR PALETTE VISIBILITY */
@@ -299,7 +295,7 @@ input{
 .top{
 	z-index: 100;
 }
-.anti-scroll{
+.noScroll{
 	overflow: hidden;
 }
 
@@ -359,8 +355,6 @@ input{
 	position: relative;
 	width: 100%;
 	top: 92px;
-	color: white;
-	font-family: BRRR, sans-serif;
 	font-size: 170px;
 	line-height: 95%;
 	max-width: 5000px;
@@ -383,9 +377,6 @@ input{
 .photo_wrapper{
 	position: relative;
 	top: 1100px;
-	color: white;
-	font-family: BRRR, sans-serif;
-	font-weight: 500;
 	font-size: 14px;
 	display: flex;
 	flex-wrap: wrap;
@@ -456,7 +447,7 @@ input{
 	left: 28%;
 }
 .txt_4{
-	top: 85%;
+	top: 76%;
 	left: 28%;
 }
 
@@ -472,7 +463,7 @@ input{
 .ph_6{
 	width: 400px;
 	height: 600px;
-	background-image: url('../public/json/assets/about_us/pics/allas.jpg');
+	background-image: url('../public/json/assets/about_us/pics/allas.png');
 	background-size: cover;
 	left: 50%;
 	top: 7%
@@ -482,7 +473,7 @@ input{
 	left: 70%;
 }
 .txt_6{
-	top: 86%;
+	top: 83%;
 	left: 50%;
 }
 
