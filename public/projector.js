@@ -1,7 +1,17 @@
-var socket;
-socket = io.connect('192.168.1.75:3000');
+// $.ajax({
+//     url: '//freegeoip.net/json/',
+//     datatype: 'json',
+//     method: 'get',
+//     success: function(data) {
+//       $('pre').html("IP Addr::::" + data.ip);
+//       console.log(data.ip)
+//     }
+// });
 
-var mail_trigger = document.getElementsByClassName('email')[0]; // send email via form
+var socket;
+socket = io.connect('localhost:3000');
+
+var mail_trigger = document.getElementsByClassName('send')[0]; // send email via form
 var message = document.getElementsByClassName('done')[0]; // non mi ricordo a cosa serva
 
 // VAR for sockets

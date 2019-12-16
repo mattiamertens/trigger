@@ -183,7 +183,7 @@ a {
 	background-color: #00ff00;
 	border: 2px solid #00ff00;
 	font-family: neue-haas-unica, sans-serif;
-	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
+	font-weight: 500;
 }
 .done{
 	position: absolute;
@@ -191,24 +191,24 @@ a {
 	top: 91%;
 	transform: translate(-50%);
 }
+
+/* EMAIL */
 .email{
 	position: absolute;
-	left: 30%;
-	top: 125%;
-	z-index: 100;
-	width: 300px;
-	display: flex;
+	left: 50%;
+	transform: translate(-50%);
+	top: 25%;
+	z-index: 300;
+	width: 430px;
 }
 .send{
-	position: absolute;
-	left: 120%;
-	top:50%;
+	position: relative;
+	left: 270px;
 }
 input{
 	position: absolute;
 	height: 40px;
-	width: 400px;
-	left: -20%;
+	width: 260px;
 	font-size: 20px;
 }
 
@@ -226,11 +226,12 @@ input{
 	width: 100%;
 	overflow: hidden;
 	top: 20%;
+	background-color: white;
 }
 
 /* PALETTE SELECTOR */
 .color_wrapper{
-	z-index: -1; 
+	z-index: -100; 
 	width: 94%;
 	height: 92%;
 	position: absolute;
@@ -290,6 +291,12 @@ input{
 	position: relative;
 	color: white;
 	top: 305px;
+}
+.orbit_anim{
+	position: absolute;
+	top: 80%;
+	width: 70%;
+	height: 300px;
 }
 
 .top{
@@ -354,29 +361,24 @@ input{
 .animated_txt{
 	position: relative;
 	width: 100%;
-	top: 92px;
-	font-size: 170px;
-	line-height: 95%;
-	max-width: 5000px;
-    overflow: hidden;
-    white-space: nowrap;
+	top: 152px;
 }
 .outline{
 	-webkit-text-stroke: 1px white;
 	-webkit-text-fill-color: black;
 }
 .video{
-	position: absolute;
-	top: 75%;
-	left: 50%;
-	transform: translate(-50%);
+	position: relative;
+	width: 80%;
+	height: auto;
+	margin: 200px auto;
+	background-color: #fff;
 }
 
 
  /* Photo section  */
 .photo_wrapper{
 	position: relative;
-	top: 1100px;
 	font-size: 14px;
 	display: flex;
 	flex-wrap: wrap;

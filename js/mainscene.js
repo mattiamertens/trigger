@@ -26,7 +26,7 @@ function init() {
         alpha: true,
         preserveDrawingBuffer: true
     });
-    renderer.setClearColor( 0x000000, 1);
+    renderer.setClearColor( 0x000000, 0.95);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -48,6 +48,10 @@ function init() {
     h1 = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.5);
     h1.position.set(-300,200, -3000);
     scene.add(h1);
+    
+    h2 = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.2);
+    h2.position.set(-1000, 200, 100);
+    scene.add(h2);
 
     var s1 = new THREE.SpotLight(0xffffff);
     s1.position.set(300, 300, -1000);
@@ -56,13 +60,18 @@ function init() {
     var s2 = new THREE.SpotLight(0xffffff);
     s2.position.set(-300, 300, 1000);
     scene.add(s2);
+    
+    // var s3 = new THREE.SpotLight(0xffffff);
+    // s3.position.set(0, 0, 100);
+    // scene.add(s3);
 
     var d1 = new THREE.DirectionalLight (0xffffff, 0.4);
     d1.position.set(0, 1000, 0);
     scene.add(d1);
-
-
-
+    
+    // var d2 = new THREE.DirectionalLight (0xffffff, 0.4);
+    // d2.position.set(0, 0, 0);
+    // scene.add(d2);
 
 
     // PISTOLUZZA
@@ -328,16 +337,13 @@ animate();
 
 
 /////////////////////////////////////////////////////////////////////////////
-
-
 $(window).resize(function () {
-    SCREEN_WIDTH = dimensionsW;
-    SCREEN_HEIGHT = dimensionsH;
+    SCREEN_WIDTH = window.innerWidth;
+    SCREEN_HEIGHT = window.innerHeight;
     camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
     camera.updateProjectionMatrix();
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 });
-
 
 
 // SAVEFILE FUNCTION //
@@ -357,18 +363,18 @@ function saveAsImage() {
 
 }
 
-var saveFile = function (strData, filename) {
-    var link = document.createElement('a');
-    if (typeof link.download === 'string') {
-        document.body.appendChild(link); //Firefox requires the link to be in the body
-        link.download = filename;
-        link.href = strData;
-        link.click();
-        document.body.removeChild(link); //remove the link when done
-    } else {
-        location.replace(uri);
-    }
-}
+// var saveFile = function (strData, filename) {
+//     var link = document.createElement('a');
+//     if (typeof link.download === 'string') {
+//         document.body.appendChild(link); //Firefox requires the link to be in the body
+//         link.download = filename;
+//         link.href = strData;
+//         link.click();
+//         document.body.removeChild(link); //remove the link when done
+//     } else {
+//         location.replace(uri);
+//     }
+// }
 
 
 

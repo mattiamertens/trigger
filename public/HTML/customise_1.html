@@ -119,15 +119,23 @@
 
         </div>
     </div>
-            
-
-
-    <div class="email">
-        <input type="text" placeholder="Your email">
-        <div class="send btn">SEND</div>
-    </div>
+    
     <!-- canvas 3D model -->
-    <div class="wrapper_cont"> <div id="container"></div> </div>
+    <div class="wrapper_cont"> 
+        <div id="container"></div>
+        <div class="orbit_anim">
+            <video src="../json/assets/3D_animation.mov" type='video/mov' autoplay>
+                <!-- <source src="../json/assets/3D_animation.mov" type='video/mov'> -->
+            </video>
+        </div>
+
+        <div class="email">
+            <input type="text" placeholder="Your email">
+            <div class="send btn">SEND</div>
+    </div>
+    </div>
+
+   
 
 </body>
 
@@ -148,4 +156,7 @@
 <!-- SOCKET.IO -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
 <script src='../projector.js'></script>
+
+<!-- REQUIRE JS -->
+<script src=" https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
 </html>
