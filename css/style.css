@@ -232,12 +232,12 @@ input{
 /* PALETTE SELECTOR */
 .color_wrapper{
 	z-index: -100; 
-	width: 94%;
+	width: 95%;
 	height: 92%;
 	position: absolute;
-	left: 3%;
+	margin: 0 2.5%;
 	top: 102%;
-	background-color:rgba(29,29,27,0.6);
+	background-color:rgba(29,29,27,0.73);
 	overflow: scroll;
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
@@ -256,24 +256,26 @@ input{
 
 /* CLOSE COLOR PALETTE */
 .close{
-	position: fixed;
+	position: sticky;
 	top: 1%;
-	left: 2%;
+	left: 1%;
 	height: 30px;
 	width: 30px;
-	background: url('close.png') no-repeat;
+	background: url('close.svg') no-repeat;
 	background-size: contain;
+	z-index: 10;
 }
 .close_txt{
 	color: white;
 	position: fixed;
 	top: 1%;
-	left: 6%;
+	left: 5%;
 	height: 30px;
 	line-height: 30px;
 }
 .color_palette{
-	width: 100%;
+	width: 96%;
+	margin: 0 2%;
 	height: auto;
 	position: absolute;
 	top: 5%;
@@ -295,8 +297,10 @@ input{
 .orbit_anim{
 	position: absolute;
 	top: 80%;
-	width: 70%;
+	width: 500px;
 	height: 300px;
+	background-image: url('../public/json/assets/3D_animation.gif');
+	background-size: contain;
 }
 
 .top{
@@ -417,7 +421,7 @@ input{
 	width: 250px;
 	height: 370px;
 	background-image: url('../public/json/assets/about_us/pics/mea.png');
-	left: 30%;
+	left: 25%;
 	top: 35%
 }
 .txt_1{
@@ -441,7 +445,7 @@ input{
 	width: 250px;
 	height: 370px;
 	background-image: url('../public/json/assets/about_us/pics/bianca.png');
-	left: 55%;
+	left: 59%;
 	top: 13%
 }
 .txt_3{
@@ -459,7 +463,7 @@ input{
 	height: 600px;
 	background-image: url('../public/json/assets/about_us/pics/allas1.gif');
 	background-size: cover;
-	left: 20%;
+	left: 21%;
 	top: 7%
 }
 .ph_6{
@@ -467,7 +471,7 @@ input{
 	height: 600px;
 	background-image: url('../public/json/assets/about_us/pics/allas.png');
 	background-size: cover;
-	left: 50%;
+	left: 52%;
 	top: 7%
 }
 .txt_5{
@@ -476,7 +480,7 @@ input{
 }
 .txt_6{
 	top: 83%;
-	left: 50%;
+	left: 52%;
 }
 
 /* FOURTH PHOTO CONTAINER */
@@ -485,19 +489,19 @@ input{
 	background-size: cover;
 	width: 250px;
 	height: 360px;
-	left: 50%;
-	top: 7%;
+	left: 53%;
+	top: 11%;
 }
 .ph_8{
 	background-image: url('../public/json/assets/about_us/pics/allas_bianca.png');
 	width: 320px;
 	height: 480px;
-	left: 29%;
+	left: 27%;
 	top: 30%
 }
 .txt_7{
 	top: 8%;
-	left: 43%;
+	left: 46%;
 }
 .txt_8{
 	top: 90%;
