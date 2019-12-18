@@ -1,32 +1,47 @@
 $('.calcio').on("click", function(){
     $('.c_w_co').addClass('visibility');
     noScroll();
+    // inverted();
 });
 
 $('.canna').on("click", function(){
     $('.c_w_ca').addClass('visibility');
     noScroll();
+    // inverted();
 });
 
 $('.grilletto').on("click", function(){
     $('.c_w_gr').addClass('visibility');
     noScroll();
+    // inverted();
 });
 
 $('.dettagli').on("click", function(){
     $('.c_w_de').addClass('visibility');
     noScroll();
+    // inverted();
 });
 
 
 function noScroll() {
-  $(document.body).addClass('noScroll')
+  $(document.body).addClass('noScroll');
 }
 
+// Show - hide inverted components img
+function inverted(){
+    setTimeout(function(){
+        $('.inverted_components').addClass('inverted_vis');
+    }, 600);
+}
+function rem_inverted(){
+    $('.inverted_components').removeClass('inverted_vis');
+}
 
+// Close color palette, invertes img
 $(".close, .close_txt").on('click', function(){
     $('.color_wrapper').removeClass('visibility');
     $(document.body).removeClass('noScroll');
+    rem_inverted();
 });
 
 
@@ -35,6 +50,9 @@ $('.done').click(function (){
     $('html, body').animate({
         scrollTop: $("#container").offset().top - 100
     }, 600);
+    setTimeout(function(){
+        $('.orbit_anim').hide();
+    }, 2500);
 });
 
 

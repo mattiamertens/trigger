@@ -153,11 +153,26 @@ a {
 	display: flex;
 	flex-wrap: wrap;
 }
-.components_wrapper > div{
+.components_wrapper > *{
 	width: 49.8%;
 	height: 49.8%;
 	border: 1px solid white;
 }
+
+/* .inverted_components{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 2.5%;
+	border: none;
+	z-index: -2;
+	opacity: 0;
+	background-image: url('../public/json/assets/img/inverted_img.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: invert(1);
+} */
+
 .calcio{
 	background-image: url('../public/json/assets/img/calcio.png');
 	background-size: cover;
@@ -237,13 +252,17 @@ input{
 	position: absolute;
 	margin: 0 2.5%;
 	top: 102%;
-	background-color:rgba(29,29,27,0.73);
+	background-color:rgb(21, 21, 21);
 	overflow: scroll;
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
 }
 
 /* COLOR PALETTE VISIBILITY */
+/* .inverted_vis{
+	z-index: 4;
+	opacity: 1;
+} */
 .visibility{
 	z-index: 10;
 	overflow: scroll;
@@ -296,9 +315,10 @@ input{
 }
 .orbit_anim{
 	position: absolute;
-	top: 80%;
-	width: 500px;
-	height: 300px;
+	top: 85%;
+	left: 40%;
+	width: 250px;
+	height: 150px;
 	background-image: url('../public/json/assets/3D_animation.gif');
 	background-size: contain;
 }
@@ -497,7 +517,7 @@ input{
 	width: 320px;
 	height: 480px;
 	left: 27%;
-	top: 30%
+	top: 30%;
 }
 .txt_7{
 	top: 8%;
