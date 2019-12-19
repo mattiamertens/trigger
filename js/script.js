@@ -67,10 +67,10 @@ var frameNumber = 0, // start video at frame 0
     // var vid = $('#v0')[0]; // jquery option
 
 // dynamically set the page height according to video length
-vid.addEventListener('loadedmetadata', function() {
-  setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
-  console.log('sticazzi');
-});
+// vid.addEventListener('loadedmetadata', function() {
+//   setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+//   console.log('sticazzi');
+// });
 
 
 // Use requestAnimationFrame for smooth playback

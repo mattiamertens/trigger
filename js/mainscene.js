@@ -136,6 +136,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('test');
+        $(this).siblings().removeClass('test');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -144,9 +146,6 @@ function init() {
         calcioObj.traverse( function ( child ) { 
             
             if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
                 child.material.map = newTexture;
                 child.material.needsUpdate = true;
                 child.material.map.needsUpdate = true;
