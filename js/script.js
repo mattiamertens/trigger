@@ -1,21 +1,18 @@
 $('.calcio').on("click", function(){
     $('.c_w_co').addClass('visibility');
-    noScroll();
 });
 
 $('.canna').on("click", function(){
     $('.c_w_ca').addClass('visibility');
-    noScroll();
+
 });
 
 $('.grilletto').on("click", function(){
     $('.c_w_gr').addClass('visibility');
-    noScroll();
 });
 
 $('.dettagli').on("click", function(){
     $('.c_w_de').addClass('visibility');
-    noScroll();
 });
 
 

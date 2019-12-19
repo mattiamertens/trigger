@@ -43,7 +43,6 @@ a {
 	height: 92px;
 	width: 100%;
 	position: fixed;
-	background-color: black;
 	color: white;
 	line-height: 92px;
 	z-index: 101;
@@ -86,6 +85,7 @@ a {
 	height: 100%;
 	width: calc(100% - 340px);
 	z-index: 2;
+	/* border-right: 1px solid white; */
 }
 #video_home{
 	position: absolute;
@@ -94,8 +94,8 @@ a {
 .side-column{
 	position: relative;	
 	width: 340px;
-	height: 99%;
-	border-left: 1px solid white;
+	height: 100%;
+	border-left: 2px solid white;
 }
 
 .link{
@@ -106,6 +106,7 @@ a {
 	top: 80%;
 	font-size: 40px;
 	z-index: 2;
+	color: #00ff00;
 }
 .related{
 	width: 46.6%;
@@ -123,7 +124,7 @@ a {
 	background-size: cover;
 }
 .r_pic3{
-	background-image: url('../public/json/assets/home/about_us.png');
+	background-image: url('../public/json/assets/home/project.png');
 	background-repeat: no-repeat;
 }
 
@@ -132,8 +133,8 @@ a {
 }
 #about{
 	height: 33.33%;
-	border-top: 1px solid white;
-	border-bottom: 1px solid white;
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
 }
 #project{
 	height: 33.33%;
