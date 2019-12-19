@@ -154,20 +154,13 @@ a {
 	height: 49.8%;
 	border: 1px solid white;
 }
-
-/* .inverted_components{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 2.5%;
-	border: none;
-	z-index: -2;
-	opacity: 0;
-	background-image: url('../public/json/assets/img/inverted_img.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	filter: invert(1);
-} */
+.components_wrapper > * > h2{
+	color:#00ff00;
+	position: relative;
+	top: 20px;
+	width: 93%;
+	text-align: end;
+}
 
 .calcio{
 	background-image: url('../public/json/assets/img/calcio.png');
@@ -198,8 +191,8 @@ a {
 }
 .done{
 	position: absolute;
-	left: 50%;
 	top: 91%;
+	left: 50%;
 	transform: translate(-50%);
 }
 
@@ -254,11 +247,6 @@ input{
 	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
 }
 
-/* COLOR PALETTE VISIBILITY */
-/* .inverted_vis{
-	z-index: 4;
-	opacity: 1;
-} */
 .visibility{
 	z-index: 10;
 	overflow: scroll;
@@ -309,6 +297,12 @@ input{
 	color: white;
 	top: 305px;
 }
+.on_focus{
+	border: 3px solid white;
+	width: 265px;
+	height: 305px;
+}
+
 .orbit_anim{
 	position: absolute;
 	top: 85%;
@@ -402,7 +396,7 @@ input{
  /* Photo section  */
 .photo_wrapper{
 	position: relative;
-	font-size: 14px;
+	font-size: 22px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -413,7 +407,7 @@ input{
 }
 .outline_txt{
 	position: absolute;
-	font-size: 27px;
+	font-size: 28px;
 	width: 500px;
 	-webkit-text-stroke: 1px white;
 	-webkit-text-fill-color: black;
@@ -424,7 +418,7 @@ input{
 }
 .parameters{
 	position: absolute;
-	line-height: 20px;
+	line-height: 24px;
 	width: 300px;
 }
 .about_pic{
@@ -472,12 +466,12 @@ input{
 	top: 13%
 }
 .txt_3{
-	top: 4%;
+	top: 3%;
 	left: 32%;
 }
 .txt_4{
 	top: 76%;
-	left: 28%;
+	left: 26%;
 }
 
 /* THIRD PHOTO CONTAINER */
@@ -486,7 +480,7 @@ input{
 	height: 600px;
 	background-image: url('../public/json/assets/about_us/pics/allas1.gif');
 	background-size: cover;
-	left: 21%;
+	left: 20%;
 	top: 7%
 }
 .ph_6{
@@ -498,7 +492,6 @@ input{
 	top: 7%
 }
 .txt_5{
-	top: 1%;
 	left: 71%;
 }
 .txt_6{
@@ -520,14 +513,14 @@ input{
 	width: 320px;
 	height: 480px;
 	left: 27%;
-	top: 30%;
+	top: 25%;
 }
 .txt_7{
 	top: 11%;
-	left: 46%;
+	left: 43%;
 }
 .txt_8{
-	top: 90%;
+	top: 85%;
 	left: 53%;
 }
 
@@ -569,10 +562,4 @@ input{
 	width: 48%;
 	height: 100%;
 	background-image: url('../public/json/assets/icons/Billie_Eilish/gun.png');
-}
-
-.test{
-	border: 2px solid white;
-	width: 265px;
-	height: 305px;
 }

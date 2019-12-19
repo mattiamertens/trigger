@@ -136,8 +136,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
-        $(this).addClass('test');
-        $(this).siblings().removeClass('test');
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -157,6 +157,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -181,6 +183,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -204,6 +208,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -229,6 +235,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -251,6 +259,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -275,6 +285,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_c.png");
         newTexture.encoding = THREE.sRGBEncoding;
@@ -298,6 +310,8 @@ function init() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        $(this).addClass('on_focus');
+        $(this).siblings().removeClass('on_focus');
         
         var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
         newTexture.encoding = THREE.sRGBEncoding;
