@@ -392,12 +392,15 @@ input{
 }
 .video{
 	position: relative;
-	width: 80%;
-	height: auto;
-	margin: 200px auto;
-	background-color: #fff;
+	margin: 200px 0;
+	left: 50%;
+	transform: translate(-50%);
 }
-
+#about_vid{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+}
 
  /* Photo section  */
 .photo_wrapper{
