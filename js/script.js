@@ -47,6 +47,12 @@ $('.btn_container').click(function (){
     }, 600);
 });
 
+// Finish + mail
+$(".finish").on('click', function(){
+    $('.finish').fadeOut();
+    $('.email').fadeIn();
+});
+
 
 
 // Video animation on scroll (ABOUT US)

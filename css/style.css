@@ -201,7 +201,8 @@ a {
 	left: 50%;
 	transform: translate(-50%);
 	top: 25%;
-	z-index: -1;
+	display: none;
+	z-index: 300;
 	/* z-index: 300; needs to change later, back to 300 */
 	width: 430px;
 }
@@ -211,7 +212,7 @@ a {
 }
 input{
 	position: absolute;
-	height: 40px;
+	height: 36px;
 	width: 260px;
 	font-size: 20px;
 }
@@ -564,28 +565,51 @@ input{
 	position: relative;
 	display: flex;
 	width: 100%;
-	height: 900px;
-	margin: 30px 0;
+	height: 800px;
+	margin: 30px 0 110px 0;
+	
 }
 .artist{
 	position: absolute;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-.gun{
+.weapon{
 	position: absolute;
-	left: 52%;
+	left: 50%;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-.artist:nth-of-type(1){
+.artist{
+	position: relative;
+	width: 48%;
+	height: 100%;
+}
+.art_1{
 	position: relative;
 	width: 48%;
 	height: 100%;
 	background-image: url('../public/json/assets/icons/Billie_Eilish/billie.png');
 }
-.number_1{
+.gun_1{
+	top: 10%;
 	width: 48%;
-	height: 100%;
+	height: 80%;
 	background-image: url('../public/json/assets/icons/Billie_Eilish/gun.png');
+	background-position: 40%;
+}
+
+
+/* PROJECT */
+.project_txt{
+	width: 62%;
+	position: absolute;
+	top: 16%;
+	left: 3%;
+
+
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 40px;
 }
