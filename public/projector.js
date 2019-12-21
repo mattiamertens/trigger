@@ -5,12 +5,12 @@
 //     success: function(data) {
 //       $('pre').html("IP Addr::::" + data.ip);
 //       console.log(data.ip)
-//     }
+//     }    
 // });
 
 var socket;
-socket = io.connect('192.168.43.43:3000');
-// socket = io.connect('localhost:3000');
+// socket = io.connect('192.168.43.43:3000');
+socket = io.connect('localhost:3000');
 
 var mail_trigger = document.getElementsByClassName('send')[0]; // send email via form
 var message = document.getElementsByClassName('done')[0]; // non mi ricordo a cosa serva

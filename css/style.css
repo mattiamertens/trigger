@@ -41,6 +41,7 @@ a {
 }
 .navbar{
 	height: 92px;
+	background-color: black;
 	width: 100%;
 	position: fixed;
 	color: white;

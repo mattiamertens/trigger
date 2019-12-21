@@ -53,14 +53,14 @@ $(".finish").on('click', function(){
 
 
 // Video animation on scroll (ABOUT US)
-var frameNumber = 0, // start video at frame 0
-    // lower numbers = faster playback
-    playbackConst = 240, 
-    // get page height from video duration
-    setHeight = document.getElementById("set-height"), 
-    // select video element         
-    vid = document.getElementById('animated_txt'); 
-    // var vid = $('#v0')[0]; // jquery option
+// var frameNumber = 0, // start video at frame 0
+//     // lower numbers = faster playback
+//     playbackConst = 240, 
+//     // get page height from video duration
+//     setHeight = document.getElementById("set-height"), 
+//     // select video element         
+//     vid = document.getElementById('animated_txt'); 
+//     // var vid = $('#v0')[0]; // jquery option
 
 // dynamically set the page height according to video length
 // vid.addEventListener('loadedmetadata', function() {
@@ -70,10 +70,10 @@ var frameNumber = 0, // start video at frame 0
 
 
 // Use requestAnimationFrame for smooth playback
-function scrollPlay(){  
-  var frameNumber  = window.pageYOffset/playbackConst;
-  vid.currentTime  = frameNumber;
-  window.requestAnimationFrame(scrollPlay);
-}
+// function scrollPlay(){  
+//   var frameNumber  = window.pageYOffset/playbackConst;
+//   vid.currentTime  = frameNumber;
+//   window.requestAnimationFrame(scrollPlay);
+// }
 
-window.requestAnimationFrame(scrollPlay);
+// window.requestAnimationFrame(scrollPlay);
