@@ -1,3 +1,8 @@
+$(window).on('load', function(){
+    console.log('daje!');
+    
+});
+
 $('.calcio').on("click", function(){
     $('.c_w_co').addClass('visibility');
 });

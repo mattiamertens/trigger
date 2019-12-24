@@ -20,7 +20,7 @@ var loader = new THREE.JSONLoader(manager);
 
 function init() {
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, .1, 500);
+    camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, .1, 500);
     renderer = new THREE.WebGLRenderer({
         antialias: true,
         alpha: true,
@@ -39,9 +39,7 @@ function init() {
     controls.dampingFactor = 0.2;
     controls.addEventListener('change', render);
 
-    camera.position.x = 15;
-    camera.position.y = 10;
-    camera.position.z = 15;
+    camera.position.set(22,10,8);
     camera.lookAt(scene.position);
 
     // LUCI
