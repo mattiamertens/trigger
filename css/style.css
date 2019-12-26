@@ -19,7 +19,25 @@
 	top: 0%;
 }
 
+/* LOADER */
+.load_wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 10000;
+}
 
+.loader{
+	background-image: url('../public/json/assets/spinner.gif');
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+}
 
 /* HOMEPAGE RULES */
 *{
