@@ -3,6 +3,7 @@
 <head>
     <title>Trigger</title>
     <meta charset="utf-8">
+    <meta http-equiv="Cache-control" content="public">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel='icon' href='../favicon.png' type='image/x-icon'>
     <link rel="stylesheet" href="https://use.typekit.net/oit1sak.css">
@@ -31,7 +32,7 @@
 
     <div class="video">
         <video controls height="720px" id="about_vid" poster="../json/assets/about_us/pics/thumbnail.png">
-            <source src="../json/assets/about_us/trigger_about.mp4" type='video/mp4'>
+            <source src="../json/assets/about_us/trigger_about-opt.mp4" type='video/mp4'>
         </video>
     </div>
 
@@ -41,10 +42,10 @@
         <div class="photo_container">
             <div class="ph_1 about_pic"></div>
             <div class="ph_2 about_pic"></div>
+
             <div class="txt_1 parameters">
                 <span class="outline_txt_1">  YOUR </span> <br>  STYLE
             </div>
-            
             <div class="txt_2 outline_txt">
                     WE ARE CURIOUS <br>
                     AND WE NEVER REST
@@ -52,11 +53,11 @@
         </div>
         
         <div class="photo_container">
-            <div class="ph_3 about_pic"></div>
-            <div class="ph_4 about_pic"></div>
+            <div class="ph_3 about_pic lazy" data-src="../json/assets/about_us/pics/in_3.png"></div>
+            <div class="ph_4 about_pic lazy" data-src="../json/assets/about_us/pics/bianca.png"></div>
+
             <div class="txt_3 parameters">
                 <span class="outline_txt_1">  YOUR </span> <br> IDENTITY
-                   
             </div>
             <div class="txt_4 outline_txt">
                     WE ARE NATURAL <br>
@@ -65,8 +66,9 @@
         </div>
 
         <div class="photo_container">
-            <div class="ph_5 about_pic"></div>
-            <div class="ph_6 about_pic"></div>
+            <div class="ph_5 about_pic lazy" data-src="../json/assets/about_us/pics/allas1-opt.gif"></div>
+            <div class="ph_6 about_pic lazy" data-src="../json/assets/about_us/pics/allas.png"></div>
+
             <div class="txt_5 parameters">
                 <span class="outline_txt_1">  YOUR </span> <br> UNIQUENESS
             </div>
@@ -77,8 +79,9 @@
         </div>
         
         <div class="photo_container">
-            <div class="ph_8 about_pic"></div>
-            <div class="ph_7 about_pic"></div>
+            <div class="ph_8 about_pic lazy" data-src="../json/assets/about_us/pics/allas_bianca.png"></div>
+            <div class="ph_7 about_pic lazy" data-src="../json/assets/about_us/pics/allas_seduto.png"></div>
+
             <div class="txt_7 parameters">
                 <span class="outline_txt_1">  YOUR </span> <br> SHOT 
             </div>
@@ -98,4 +101,6 @@
 <!-- JAVASCRIPT -->
 <script src="../../js/jquery.js"> </script>
 <script src="../../js/script.js"></script>
+<script src="../../js/jquery.lazy.min.js"></script>
+
 </html>

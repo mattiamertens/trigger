@@ -134,11 +134,12 @@
         </div>
 
         <div class="finish btn">FINISH</div>
-       
-        <div class="email">
-            <input type="text" placeholder="Your email">
-            <div class="send btn">SEND</div>
-        </div>
+
+       <!-- EMAIL SENDER  -->
+        <form class="email" method='POST' action='customise_2.html'>
+            <input type="text" placeholder="Your email" name="mail">
+            <input class="send btn" type="submit" value="SEND">
+        </form>
     </div>
 
    
@@ -157,7 +158,6 @@
 
 <!-- EMAIL SENDER  -->
 <script src="../../js/index.js"></script>
-<!-- <script src="../../server.js"></script> -->
 
 <!-- SOCKET.IO -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>

@@ -1,13 +1,3 @@
-// $.ajax({
-//     url: '//freegeoip.net/json/',
-//     datatype: 'json',
-//     method: 'get',
-//     success: function(data) {
-//       $('pre').html("IP Addr::::" + data.ip);
-//       console.log(data.ip)
-//     }    
-// });
-
 var socket;
 // socket = io.connect('192.168.43.43:3000');
 socket = io.connect('localhost:3000');

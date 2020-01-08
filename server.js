@@ -1,8 +1,12 @@
-// var mailTo = document.getElementById('mail');
 
 // Nodemailer
 var nodemailer = require('nodemailer');
+var path = require('path')
+var bodyParser = require('body-parser');
+var urlencodedParser = bodyParser.urlencoded({ extended: true })
+// var mailTo= (req.body.mail); // same as name value in customise_1 file
 var hbs = require('nodemailer-express-handlebars');
+
 const handlebarOptions = {
     viewEngine: {
       extName: '.hbs',
@@ -26,31 +30,32 @@ var transporter = nodemailer.createTransport({
 // Handlebars
 transporter.use('compile', hbs(handlebarOptions));
 
-// Mail options
-var mailOptions = {
-    from: 'trigger@gmail.com',
-    to: 'gurki4.mm@gmail.com',
-    subject: 'test con immagini + click',
-    text: 'AAA',
-    // attachments: [{
-    //     filename: 'gianbibi.jpg', path: 'views/gianbibi.jpg'}
-    // ],
-    template: 'index'
-};
-
-//Send Mail
-
-
-
-
-
 // Socket.io projector
 var express = require('express');
 var app = express();
 var server = app.listen(3000);
-app.use(express.static('public'));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
+// Get email address from form
+app.get('customise_2.html', urlencodedParser, function(req, res) {
+    console.log(req.body); // same as name value in customise_1 file
+    console.log('osmedjdfj');
+});
 
+// Mail options
+var mailOptions = {
+    from: 'trigger@gmail.com',
+    to: 'gurki4.mm@gmail.com',
+    // to: mailTo,
+    subject: 'test con immagini + click',
+    text: 'AAA',
+    // attachments: [{
+    //     filename: 'gianbibi.jpg', path: 'views/layouts/gianbibi.jpg'}
+    // ],
+    template: 'index'
+};
+
+// Socket.io setup
 var socket = require('socket.io');
 var io = socket(server);
 io.sockets.on('connection', newConnection);
@@ -61,13 +66,13 @@ function newConnection(socket){
     // Email sender function
     socket.on('mail_sender', mail_sender);
     function mail_sender(data){
-        console.log('Mail sent');
         transporter.sendMail(mailOptions, function(err, data){
             if (err){
                 console.log('fuck no' + err);
             }
             else{
-                console.log('yes daje');
+                console.log('Mail sent');
+                console.log(req.body.name);
             }            
         });
     }

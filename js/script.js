@@ -1,12 +1,14 @@
 $(window).on('load', function(){
-    console.log('daje!');
     $('.load_wrapper').fadeOut();    
 });
 
-// var distance = $(document).scrollTop();
-// $(document).scroll(function() {
-//     console.log(distance);
-// })
+$(document).ready(function(){
+    $('.lazy').lazy({
+        threshold: 150
+    })
+});
+
+
 $(window).scroll(function (event) {
     var currentScrollPosition = $(window).scrollTop();
     console.log(currentScrollPosition);

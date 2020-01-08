@@ -503,14 +503,14 @@ input{
 .ph_3{
 	width: 340px;
 	height: 510px;
-	background-image: url('../public/json/assets/about_us/pics/in_3.png');
+	/* background-image: url('../public/json/assets/about_us/pics/in_3.png'); */
 	left: 32%;
 	top: 10%
 }
 .ph_4{
 	width: 250px;
 	height: 370px;
-	background-image: url('../public/json/assets/about_us/pics/bianca.png');
+	/* background-image: url('../public/json/assets/about_us/pics/bianca.png'); */
 	left: 59%;
 	top: 13%
 }
@@ -527,7 +527,7 @@ input{
 .ph_5{
 	width: 400px;
 	height: 600px;
-	background-image: url('../public/json/assets/about_us/pics/allas1.gif');
+	/* background-image: url('../public/json/assets/about_us/pics/allas1-opt.gif'); */
 	background-size: cover;
 	left: 20%;
 	top: 7%
@@ -535,7 +535,7 @@ input{
 .ph_6{
 	width: 400px;
 	height: 600px;
-	background-image: url('../public/json/assets/about_us/pics/allas.png');
+	/* background-image: url('../public/json/assets/about_us/pics/allas.png'); */
 	background-size: cover;
 	left: 52%;
 	top: 7%
@@ -550,7 +550,7 @@ input{
 
 /* FOURTH PHOTO CONTAINER */
 .ph_7{
-	background-image: url('../public/json/assets/about_us/pics/allas_seduto.png');
+	/* background-image: url('../public/json/assets/about_us/pics/allas_seduto.png'); */
 	background-size: cover;
 	width: 250px;
 	height: 360px;
@@ -558,7 +558,7 @@ input{
 	top: 11%;
 }
 .ph_8{
-	background-image: url('../public/json/assets/about_us/pics/allas_bianca.png');
+	/* background-image: url('../public/json/assets/about_us/pics/allas_bianca.png'); */
 	width: 320px;
 	height: 480px;
 	left: 27%;
