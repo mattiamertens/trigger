@@ -109,6 +109,7 @@ a {
 }
 #video_home{
 	position: absolute;
+	height: 100%;
 }
 
 .side-column{
@@ -134,18 +135,16 @@ a {
 	position: relative;
 	left: 44%; 
 	background-size: contain;	
+	background-repeat: no-repeat;
 }
 .r_pic1{
 	background-image: url('../public/json/assets/home/icons.png');
-	background-repeat: no-repeat;
 }
 .r_pic2{
 	background-image: url('../public/json/assets/home/about_us.png');
-	background-size: cover;
 }
 .r_pic3{
 	background-image: url('../public/json/assets/home/project.png');
-	background-repeat: no-repeat;
 }
 
 #icons{
@@ -628,10 +627,14 @@ input{
 	position: absolute;
 	top: 16%;
 	left: 3%;
-
-
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 500;
 	font-size: 30px;
 	line-height: 40px;
+}
+.project_vid{
+	position: absolute;
+	top: 76%;
+	left: 50%;
+	transform: translate(-50%);
 }
