@@ -37,7 +37,7 @@ var server = app.listen(3000);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Get email address from form
-app.get('customise_1.html', urlencodedParser, function(req, res) {
+app.get('customise_1', urlencodedParser, function(req, res) {
     console.log(req.body); // same as name value in customise_1 file
     console.log('osmedjdfj');
 });
