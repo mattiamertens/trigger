@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Trigger</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel='icon' href='favicon.png' type='image/x-icon'>
+    <link rel="stylesheet" href="https://use.typekit.net/oit1sak.css">
+</head>
+<body>
+    
+    <div class="load_wrapper"> <div class="loader"></div> </div>
+
+    <div class="navbar">
+        <div class="home"> <a href="index.html"> Trigger </a></div>
+        <div class="sections">
+            <a href="public/HTML/customise_1.html">CUSTOMISER</a>
+            <a href="public/HTML/icons.html">ICONS</a>
+            <a href="public/HTML/about.html">ABOUT US</a>
+            <a href="public/HTML/project.html">PROJECT</a>
+         </div>
+    </div>
+
+    <div class="wrapper">
+        <a href="public/HTML/customise_1.html" id="customiser"> 
+            <div>
+                <video autoplay loop id="video_home">
+                    <source src="public/json/assets/home/homepage.mp4" type='video/mp4'>
+                </video>
+            </div> 
+            <h1 class="link" style="top:93.5%;" >CUSTOMISER</h1>
+        </a>
+        <div class="side-column">
+            <a href="public/HTML/icons.html"> <div id="icons"> <h1 class="link">ICONS</h1> <div class="related r_pic1"> </div> </div> </a>
+            <a href="public/HTML/about.html"> <div id="about"> <h1 class="link">ABOUT US</h1>  <div class="related r_pic2"></div> </div> </a>
+            <a href="public/HTML/project.html"> <div id="project"> <h1 class="link">PROJECT</h1>  <div class="related r_pic3"> </div> </div> </a>
+        </div>
+    </div>
+    
+
+
+</body>
+
+<script src="js/jquery.js"> </script>
+
+<!-- EMAIL SENDER  -->
+<script src="js/index.js"></script>
+<script src="js/script.js"></script>
+
+<!-- SOCKET.IO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+<!-- <script src='projector.js'></script> -->
+
+</html>
