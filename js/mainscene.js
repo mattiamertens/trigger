@@ -195,9 +195,7 @@ function init() {
     //DETTAGLI
     $("#colors_de").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
-        // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
-        alert('si si')
         $(this).addClass('on_focus');
         $(this).siblings().removeClass('on_focus');
         
