@@ -132,7 +132,6 @@ function init() {
     //CALCIO
     $("#colors_co").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
-        // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         $(this).addClass('on_focus');
         $(this).siblings().removeClass('on_focus');
@@ -150,36 +149,10 @@ function init() {
             }
         });
     });
-    //CALCIO TEXTURES
-    $("#textures_co").children('div').click(function setAnotherTexture() {
-        var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        $(this).addClass('on_focus');
-        $(this).siblings().removeClass('on_focus');
-        
-        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        calcioObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
-
 
     //CANNA
     $("#colors_ca").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
-        // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         $(this).addClass('on_focus');
         $(this).siblings().removeClass('on_focus');
@@ -191,47 +164,16 @@ function init() {
         cannaObj.traverse( function ( child ) { 
             
             if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
                 child.material.map = newTexture;
                 child.material.needsUpdate = true;
                 child.material.map.needsUpdate = true;
             }
         });
     });
-    //CANNA TEXTUREZ
-    $("#textures_ca").children('div').click(function setAnotherTexture() {
-        alert('si si')
-        var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        $(this).addClass('on_focus');
-        $(this).siblings().removeClass('on_focus');
-        
-        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        cannaObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
-
-
    
     //GRILLETTO
     $("#colors_gr").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
-        // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
         $(this).addClass('on_focus');
         $(this).siblings().removeClass('on_focus');
@@ -243,46 +185,19 @@ function init() {
         grillettoObj.traverse( function ( child ) {
             
             if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
                 child.material.map = newTexture;
                 child.material.needsUpdate = true;
                 child.material.map.needsUpdate = true;
             }
         });
     });
-    //GRILLETTO TEXTUREZ
-    $("#textures_gr").children('div').click(function setAnotherTexture() {
-        var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        $(this).addClass('on_focus');
-        $(this).siblings().removeClass('on_focus');
-        
-        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        grillettoObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
-
-        
+  
     //DETTAGLI
     $("#colors_de").children('div').click(function setAnotherTexture() {
         var textureColor = this.className;
         // console.log(textureColor);
         var textureLoader = new THREE.TextureLoader();
+        alert('si si')
         $(this).addClass('on_focus');
         $(this).siblings().removeClass('on_focus');
         
@@ -293,41 +208,12 @@ function init() {
         dettagliObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
             
             if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
                 child.material.map = newTexture;
                 child.material.needsUpdate = true;
                 child.material.map.needsUpdate = true;
             }
         });
     });
-    //DETTAGLI TEXTUREZ
-    $("#textures_de").children('div').click(function setAnotherTexture() {
-        alert('si si')
-        var textureColor = this.className;
-        // console.log(textureColor);
-        var textureLoader = new THREE.TextureLoader();
-        $(this).addClass('on_focus');
-        $(this).siblings().removeClass('on_focus');
-        
-        var newTexture = textureLoader.load( "../json/GLTF/textures/" + textureColor + "_t.png");
-        newTexture.encoding = THREE.sRGBEncoding;
-        newTexture.flipY = false;
-    
-        dettagliObj.traverse( function ( child ) { //funzione che gestisce il cambio colore
-            
-            if (child instanceof THREE.Mesh) {
-                //create a global var to reference later when changing textures
-                //apply texture
-
-                child.material.map = newTexture;
-                child.material.needsUpdate = true;
-                child.material.map.needsUpdate = true;
-            }
-        });
-    });
-   
 
     $("#container").append(renderer.domElement);
 }
@@ -339,7 +225,7 @@ function animate() {
     requestAnimationFrame(animate);
     render();
     renderer.render(scene, camera);
-    controls.update(); // keep inertia after leaving
+    controls.update(); // keep inertia after letting go
 }
 init();
 animate();
