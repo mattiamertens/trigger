@@ -77,12 +77,22 @@ function newConnection(socket){
         });
     }
 
+    // Video start
+    socket.on('video_start', vid_start);
+    function vid_start(data) {
+        io.sockets.emit('r_vid_start');
+    }
+    
+    // Video end
+    socket.on('video_end', vid_end);
+    function vid_end(data) {
+        io.sockets.emit('r_vid_end');
+    }
+
     // Calcio 1
     socket.on('co_1', co_1);
     function co_1(data){
-        console.log('oopop');
         io.sockets.emit('r_co_1');
-        // socket.broadcast.emit('return-msg', data);
     }
     // Calcio 2
     socket.on('co_2', co_2);

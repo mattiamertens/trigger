@@ -4,7 +4,13 @@
 body{
     padding: 0;
     margin: 0;
-    /* overflow: hidden; */
+}
+
+.video_loop{
+    position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .png-container{
@@ -15,9 +21,6 @@ body{
     flex-wrap: wrap;
 }
 .png-container > div {
-    /* width: 100%;
-    height: 100%;
-    position: absolute; */
     position: relative;
     width: 49.8%;
 	height: 49.8%;

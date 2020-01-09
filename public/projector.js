@@ -2,8 +2,11 @@ var socket;
 // socket = io.connect('192.168.43.43:3000');
 socket = io.connect('localhost:3000');
 
+// VAR miscellaneous 
 var mail_trigger = document.getElementsByClassName('send')[0]; // send email via form
 var message = document.getElementsByClassName('done')[0]; // non mi ricordo a cosa serva
+var vid_start = document.getElementsByClassName('finish')[0]; // start video in loop sulla pistola
+var vid_end = document.getElementsByClassName('components_wrapper')[0]; // end video in loop sulla pistola
 
 // VAR for sockets
 var v_co_1 = document.getElementsByClassName('magenta')[0],
@@ -77,6 +80,18 @@ mail_trigger.addEventListener('click', function(){
     socket.emit('mail_sender', {});
 });
 
+// Start & stop video on gun
+vid_start.addEventListener('click', function(){
+    socket.emit('video_start', {
+    });
+    console.log('video start');
+})
+
+vid_end.addEventListener('click', function(){
+    socket.emit('video_end', {
+    });
+    console.log('video end');
+});
 
 // Socket for calcio
 v_co_1.addEventListener('click', function(){
@@ -281,6 +296,19 @@ v_de_8.addEventListener('click', function(){
 
 
 // LISTENER FOR EVENTS
+
+// Start & stop video on gun
+socket.on('r_vid_start', start_video);
+function start_video(data) {
+    $('.video_loop').show('fast');
+    $('#calcio, #canna, #grilletto, #dettagli').children('div').removeClass('projected'); // remove all the colors and show video
+}
+
+socket.on('r_vid_end', end_video);
+function end_video(data){
+    $('.video_loop').hide("fast");
+};
+
 //Calcio 1
 socket.on('r_co_1', co_1);
 function co_1(data){
