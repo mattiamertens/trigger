@@ -302,7 +302,7 @@ socket.on('r_vid_start', start_video);
 function start_video(data) {
     $('.video_loop').show('fast');
     $('#calcio, #canna, #grilletto, #dettagli').children('div').removeClass('projected'); // remove all the colors and show video
-}
+};
 
 socket.on('r_vid_end', end_video);
 function end_video(data){

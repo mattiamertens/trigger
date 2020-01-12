@@ -3,7 +3,7 @@
 var nodemailer = require('nodemailer');
 var path = require('path')
 var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: true })
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 // var mailTo= (req.body.mail); // same as name value in customise_1 file
 var hbs = require('nodemailer-express-handlebars');
 
@@ -36,9 +36,20 @@ var app = express();
 var server = app.listen(3000);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
+app.use(express.urlencoded({
+    extended: false
+}));
+
 // Get email address from form
-app.get('customise_1', urlencodedParser, function(req, res) {
-    console.log(req.body); // same as name value in customise_1 file
+// app.post('customise_1', urlencodedParser, function(req, res) {
+//     e.preventDefault();
+//     console.log(req.body); // same as name value in customise_1 file
+//     console.log('osmedjdfj');
+// });
+
+app.post('customise_1', function(req, res) {
+    e.preventDefault();
+    console.log('Data: ', req.body); // same as name value in customise_1 file
     console.log('osmedjdfj');
 });
 
@@ -72,7 +83,6 @@ function newConnection(socket){
             }
             else{
                 console.log('Mail sent');
-                console.log(req.body.name);
             }            
         });
     }

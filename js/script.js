@@ -4,7 +4,7 @@ $(window).on('load', function(){
 
 $(document).ready(function(){
     $('.lazy').lazy({
-        threshold: 150
+        threshold: 320
     })
 });
 
@@ -32,18 +32,7 @@ $('.dettagli').on("click", function(){
 });
 
 
-// function noScroll() {
-//   $(document.body).addClass('noScroll');
-// }
-
-
-// Close color palette, invertes img
-$(".close, .close_txt").on('click', function(){
-    $('.color_wrapper').removeClass('visibility');
-});
-
-
-    // SCROLL DOWN TO CANVAS
+// SCROLL DOWN TO CANVAS
 $('.done').click(function (){
     $('html, body').animate({
         scrollTop: $("#container").offset().top - 100
@@ -53,19 +42,31 @@ $('.done').click(function (){
     }, 2500);
 });
 
-    // SCROLL BACK UP
+// SCROLL BACK UP
 $('.btn_container').click(function (){
     $('html, body').animate({
         scrollTop: 0
     }, 600);
 });
 
-// Finish + mail
+// Finish + mail_form
 $(".finish").on('click', function(){
     $('.finish').fadeOut();
-    $('.email').fadeIn();
+    $('.email_form').fadeIn();
 });
 
+$('.email_form').on('submit', (e) =>{
+    e.preventDefault();
+
+    var mailTo = $('.mailTo').val().trim();
+    var dataToServer = {
+        mailTo
+    }
+
+    $.post('customise_1', 'dataToServer', function(){
+        console.log('forse ce so riuscito');
+    });
+});
 
 
 // Video animation on scroll (ABOUT US)

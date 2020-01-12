@@ -216,7 +216,7 @@ a {
 }
 
 /* EMAIL */
-.email{
+.email_form{
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%);
