@@ -626,11 +626,13 @@ input{
 .konami{
 	background-image: url('https://media.giphy.com/media/5gwvhSehU9c0U/giphy.gif');
 	position: fixed;
-	width: 70%;
-	height: 90%;
-	background-size: cover;
+	width: 60%;
+	height: 70%;
+	background-size: contain;
+	background-repeat: no-repeat;
 	z-index: 10000;
-	left: 15%;
+	left: 50%;
+	transform: translate(-30%);
 	top: 6%;
 	display: none;
 }
