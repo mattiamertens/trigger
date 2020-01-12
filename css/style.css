@@ -504,7 +504,8 @@ input{
 	height: 510px;
 	/* background-image: url('../public/json/assets/about_us/pics/in_3.png'); */
 	left: 32%;
-	top: 10%
+	top: 10%;
+	background-size: cover;
 }
 .ph_4{
 	width: 250px;
@@ -622,6 +623,18 @@ input{
 
 
 /* PROJECT */
+.konami{
+	background-image: url('https://media.giphy.com/media/5gwvhSehU9c0U/giphy.gif');
+	position: fixed;
+	width: 70%;
+	height: 90%;
+	background-size: cover;
+	z-index: 10000;
+	left: 15%;
+	top: 6%;
+	display: none;
+}
+
 .project_txt{
 	width: 62%;
 	position: absolute;
