@@ -4,10 +4,7 @@ var SCREEN_WIDTH, SCREEN_HEIGHT;
 var loader, model;
 var pistoluzza = new THREE.Object3D();
 var pscale = 0.1;
-var cube;
 var manager = new THREE.LoadingManager();
-var strDownloadMime = "image/octet-stream";
-var mailTo = document.getElementById('mail');
 var dimensionsH = window.innerHeight / 2;
 var dimensionsW = window.innerWidth / 2;
 
@@ -15,7 +12,6 @@ var dimensionsW = window.innerWidth / 2;
 manager.onLoad = function () {
     scene.add(pistoluzza);
 }
-
 var loader = new THREE.JSONLoader(manager);
 
 function init() {
@@ -114,20 +110,7 @@ function init() {
             gltf.scene.scale.set(pscale, pscale, pscale);
 
     });
-
-
-    // var saveLink = document.createElement('div');
-    // saveLink.style.position = 'absolute';
-    // saveLink.style.top = '10px';
-    // saveLink.style.width = '100%';
-    // saveLink.style.textAlign = 'center';
-    // saveLink.innerHTML =
-    //     '<a href="#" id="saveLink">Save Frame</a>';
-    // document.body.appendChild(saveLink);
-
-    // document.getElementById("saveLink").addEventListener('click', saveAsImage);
     
-
     
     //CALCIO
     $("#colors_co").children('div').click(function setAnotherTexture() {
@@ -242,34 +225,17 @@ $(window).resize(function () {
 
 
 // SAVEFILE FUNCTION //
+document.getElementsByClassName("send")[0].addEventListener('click', saveAsImage);
+
 function saveAsImage() {
-    var imgData;
+    var mailTo = $('.mailTo').val().trim();
+    var a = document.createElement('a');
 
-    try {
-        var strMime = "image/jpeg";
-        imgData = renderer.domElement.toDataURL(strMime);
-
-        saveFile(imgData.replace(strMime, strDownloadMime), "Trigger.jpg");
-
-    } catch (e) {
-        console.log(e);
-        return;
-    }
-
+    renderer.render(scene, camera);
+    a.href = renderer.domElement.toDataURL().replace("image/octet-stream", "image/png");
+    a.download = mailTo;
+    a.click();
 }
-
-// var saveFile = function (strData, filename) {
-//     var link = document.createElement('a');
-//     if (typeof link.download === 'string') {
-//         document.body.appendChild(link); //Firefox requires the link to be in the body
-//         link.download = filename;
-//         link.href = strData;
-//         link.click();
-//         document.body.removeChild(link); //remove the link when done
-//     } else {
-//         location.replace(uri);
-//     }
-// }
 
 
 
