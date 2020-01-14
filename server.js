@@ -1,11 +1,12 @@
+// File system
+const fs = require('fs');
 
 // Nodemailer
-var nodemailer = require('nodemailer');
-var path = require('path')
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
-// var mailTo= (req.body.mail); // same as name value in customise_1 file
-var hbs = require('nodemailer-express-handlebars');
+const nodemailer = require('nodemailer');
+const path = require('path')
+const bodyParser = require('body-parser');
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+const hbs = require('nodemailer-express-handlebars');
 
 const handlebarOptions = {
     viewEngine: {
@@ -31,11 +32,10 @@ var transporter = nodemailer.createTransport({
 transporter.use('compile', hbs(handlebarOptions));
 
 // Socket.io projector
-var express = require('express');
-var app = express();
-var server = app.listen(3000);
+const express = require('express');
+const app = express();
+const server = app.listen(3000);
 app.use('/public', express.static(path.join(__dirname, 'public')));
-
 app.use(express.urlencoded({
     extended: false
 }));
@@ -47,11 +47,11 @@ app.use(express.urlencoded({
 //     console.log('osmedjdfj');
 // });
 
-app.post('customise_1', function(req, res) {
-    e.preventDefault();
-    console.log('Data: ', req.body); // same as name value in customise_1 file
-    console.log('osmedjdfj');
-});
+// app.post('customise_1', function(req, res) {
+//     e.preventDefault();
+//     console.log('Data: ', req.body); // same as name value in customise_1 file
+//     console.log('osmedjdfj');
+// });
 
 // Mail options
 var mailOptions = {
@@ -67,23 +67,43 @@ var mailOptions = {
 };
 
 // Socket.io setup
-var socket = require('socket.io');
-var io = socket(server);
+const socket = require('socket.io');
+const io = socket(server);
 io.sockets.on('connection', newConnection);
 
 function newConnection(socket){
-    console.log('ciao: ' + socket.id);
+    // console.log('ciao: ' + socket.id);
 
     // Email sender function
-    socket.on('mail_sender', mail_sender);
-    function mail_sender(data){
-        transporter.sendMail(mailOptions, function(err, data){
-            if (err){
-                console.log('fuck no' + err);
+
+        // need to unlock sendMail function down here 
+
+
+    // socket.on('mail_sender', mail_sender);
+    // function mail_sender(data){
+    //     transporter.sendMail(mailOptions, function(err, data){
+    //         if (err){
+    //             console.log('fuck no' + err);
+    //         }
+    //         else{
+    //             console.log('Mail sent');
+    //         }            
+    //     });
+    // }
+
+    socket.on('mail_address', mail_address);
+    function mail_address (obj) {
+        var string_mail = JSON.stringify(obj);
+        console.log(string_mail);
+
+
+        fs.appendFile("output.json", string_mail + ' ', 'utf8', function (err) {
+            if (err) {
+                console.log("An error occured while writing JSON Object to File.");
+                return console.log(err);
             }
-            else{
-                console.log('Mail sent');
-            }            
+         
+            console.log("JSON file has been saved.");
         });
     }
 

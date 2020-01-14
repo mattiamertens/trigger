@@ -1,3 +1,20 @@
+// var requirejs = require('requirejs');
+
+// requirejs.config({
+//     //Pass the top-level main.js/index.js require
+//     //function to requirejs so that node modules
+//     //are loaded relative to the top-level JS file.
+//     nodeRequire: require
+// });
+
+// requirejs(['foo', 'bar'],
+// function   (foo,   bar) {
+//     //foo and bar are loaded according to requirejs
+//     //config, but if not found, then node's require
+//     //is used to load the module.
+// });
+// var fs = require('fs');
+
 $(window).on('load', function(){
     $('.load_wrapper').fadeOut();    
 });
@@ -55,18 +72,31 @@ $(".finish").on('click', function(){
     $('.email_form').fadeIn();
 });
 
-$('.email_form').on('submit', (e) =>{
+$('.email_form').on('submit', e =>{
     e.preventDefault();
 
     var mailTo = $('.mailTo').val().trim();
-    var dataToServer = {
-        mailTo
-    }
+    console.log(mailTo);
+    socket.emit('mail_address', {mailTo});
+    
+    // var obj_mail = {
+    //     mailTo
+    // }
+    // var testt = obj_mail.mailTo;
+    // console.log(testt);
+    // socket.emit('mail_address', {testt});
 
-    $.post('customise_1', 'dataToServer', function(){
-        console.log('forse ce so riuscito');
-    });
+    // $.post('/email', dataToServer)
+    // .then(() => {
+    //     window.location.href = '/email/sent';
+    // })
+    // .catch(() => {
+    //     window.location.href = '/error'
+    // })
+   
 });
+
+
 
 
 // Video animation on scroll (ABOUT US)
