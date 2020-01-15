@@ -48,6 +48,11 @@ $('.dettagli').on("click", function(){
     $('.c_w_de').addClass('visibility');
 });
 
+$('.close, .close_txt').click(function(){
+    $('.color_wrapper').removeClass('visibility');
+});
+
+
 
 // SCROLL DOWN TO CANVAS
 $('.done').click(function (){
@@ -69,6 +74,7 @@ $('.btn_container').click(function (){
 // Finish + mail_form
 $(".finish").on('click', function(){
     $('.finish').fadeOut();
+    $('#container').fadeOut();
     $('.email_form').fadeIn();
 });
 
