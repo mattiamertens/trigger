@@ -52,8 +52,6 @@ $('.close, .close_txt').click(function(){
     $('.color_wrapper').removeClass('visibility');
 });
 
-
-
 // SCROLL DOWN TO CANVAS
 $('.done').click(function (){
     $('html, body').animate({
