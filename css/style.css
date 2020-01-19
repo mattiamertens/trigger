@@ -125,7 +125,7 @@ a {
 	width: 100%;
 	text-align: start;
 	left: 4%;
-	top: 80%;
+	top: 75%;
 	font-size: 40px;
 	z-index: 2;
 	color: #00ff00;
@@ -135,6 +135,7 @@ a {
 	height: 74.1%;
 	position: relative;
 	left: 44%; 
+	top: -7%;
 	background-size: contain;	
 	background-repeat: no-repeat;
 }
