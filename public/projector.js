@@ -86,7 +86,6 @@ vid_start.addEventListener('click', function(){
     });
     console.log('video start');
 })
-
 vid_end.addEventListener('click', function(){
     socket.emit('video_end', {
     });

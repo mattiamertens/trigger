@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel='icon' href='../favicon.png' type='image/x-icon'>
     <link rel="stylesheet" href="https://use.typekit.net/oit1sak.css">
+    <style>
+    </style>
 </head>
 <body>
     
@@ -22,30 +24,35 @@
     </div>
 
     <div class="collabs">
-        <!-- First collab -->
+        <!-- First collab - Billie Eilish -->
         <br><br>
         <h3>Trigger x Billie Eilish</h3>
         <div class="table">
             <div class="artist art_1"></div>
             <div class="weapon gun_1"></div>
         </div>
-
-        <!-- Second collab -->
-        <div class="table_box">
-            <h3>Trigger x Doodle Man</h3>
-            <br>
-            <p>Coming soon...</p>
-            <div class="table">
-                <div class="artist art_2"></div>
-                <div class="gun gun_2"></div>
-            </div>
+        <div id="first_collab" class="model3D_container"></div>
+        
+        <!-- Second collab - Conor Meggregor -->
+        <br><br>
+        <h3>Trigger x Billie Eilish</h3>
+        <div class="table">
+            <div class="artist art_1"></div>
+            <div class="weapon gun_1"></div>
         </div>
-
+        <div id="second_collab" class="model3D_container"></div>
     </div>
 </body>
 
+<!-- 3D LIBRARY -->
+<script src="../../js/three.min.js"></script>
+<script src="../../js/loaders/JSONLoader.js"></script>
+<script src="../../js/loaders/GLTFLoader.js"></script>
+<script src="../../js/libs/OrbitControls.js"></script>
 
 <!-- JAVASCRIPT -->
 <script src="../../js/jquery.js"> </script>
 <script src="../../js/script.js"></script>
+
+<script src="../../js/icons_scene.js"></script>
 </html>

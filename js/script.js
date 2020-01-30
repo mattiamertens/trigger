@@ -73,6 +73,7 @@ $('.btn_container').click(function (){
 $(".finish").on('click', function(){
     $('.finish').fadeOut();
     $('#container').fadeOut();
+    $('.btn_container').fadeOut();
     $('.email_form').fadeIn();
 });
 
@@ -98,6 +99,14 @@ $('.email_form').on('submit', e =>{
     //     window.location.href = '/error'
     // })
    
+});
+
+// CONFIRMATION OF EMAIL SENT
+$('.send').click(function(){
+    setTimeout(function(){
+        $('.confirmation').show("fast");
+    }, 1000);
+
 });
 
 

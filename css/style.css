@@ -7,6 +7,13 @@
     font-weight: 500;
     font-style: normal;
 }
+/* ::-webkit-scrollbar {
+	width: 5px;
+}
+  ::-webkit-scrollbar-thumb {
+	background: #00ff00; 
+} */
+
 #mail{
 	position: absolute;
 	left: 30%;
@@ -232,6 +239,11 @@ a {
 	position: relative;
 	left: 270px;
 }
+.confirmation{
+	position: relative;
+	top: 400px;
+	display: none;
+}
 input{
 	position: absolute;
 	height: 36px;
@@ -313,7 +325,7 @@ input{
 }
 @keyframes vis {
     from{ transform: translate(0, 0); }
-    to { transform: translate(0, -101%); }
+    to { transform: translate(0, -101.1%); }
 }
 
 /* CLOSE COLOR PALETTE */
@@ -597,6 +609,8 @@ input{
 	position: absolute;
 	background-size: contain;
 	background-repeat: no-repeat;
+	width: 48%;
+	height: 100%;
 }
 .weapon{
 	position: absolute;
@@ -604,13 +618,12 @@ input{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-.artist{
-	position: relative;
-	width: 48%;
-	height: 100%;
+.model3D_container{
+	min-height: 819px;
+	min-width: 1092px;
+	margin: 0 auto;
 }
 .art_1{
-	position: relative;
 	width: 48%;
 	height: 100%;
 	background-image: url('../public/json/assets/icons/Billie_Eilish/billie.png');
