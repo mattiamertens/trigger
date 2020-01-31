@@ -7,12 +7,6 @@
     font-weight: 500;
     font-style: normal;
 }
-/* ::-webkit-scrollbar {
-	width: 5px;
-}
-  ::-webkit-scrollbar-thumb {
-	background: #00ff00; 
-} */
 
 #mail{
 	position: absolute;
@@ -235,13 +229,21 @@ a {
 	/* z-index: 300; needs to change later, back to 300 */
 	width: 430px;
 }
+.email_form > p {
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500;
+}
+.email_form > p:nth-of-type(1){
+	margin-bottom: 15px;
+}
 .send{
 	position: relative;
 	left: 270px;
 }
 .confirmation{
 	position: relative;
-	top: 400px;
+	top: 200px;
+	font-size: 24px;
 	display: none;
 }
 input{

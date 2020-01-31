@@ -46,20 +46,23 @@
             position: relative;
             margin: 0 auto;
         }
+        .greeting{
+            position: relative;
+            top: 20px;
+            font-size: 20px;
+            font-family: BRRR, sans-serif;
+            margin-bottom: 0;
+        }
         p.first_p {
-            font-size: 30px;
+            font-size: 26px;
             font-family: BRRR, sans-serif;
             -webkit-text-stroke: 0.8px white;
             -webkit-text-fill-color: black;
-            margin-bottom: 0;
         }
-        .greeting{
-            font-size: 14px;
-        }
-        div.img{
-            margin: 40px 0;
-            height: 200px;
 
+        div.img{
+            margin: 35px 0 41px 0;
+            height: 200px;
             background-color: thistle;
         }
         div.info_wrapper{
@@ -75,25 +78,35 @@
             line-height: 30px;
             text-align: center;
             position: relative;
-            top: 10px;
+            top: 30px;
             left: 50%;
             transform: translate(-50%);
             border: 1px solid white;
             margin-bottom: 30px;
+            background-color: #00ff00;
+            color: black;
         }
         p.info{
             position: relative;
             font-size: 18px;
         }
-        div.footer{
-            position: relative;
+        .footer{
+            display: flex;
+            position: absolute;
             left: 50%;
             transform: translate(-50%);
             bottom: 0;
-            text-align: center;
             line-height: 40px;
             font-size: 12px;
-            margin-top: 20px;
+            width: 90%;
+        }
+        .social{
+            background-image: url('ig_icon.svg');
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 10px;
         }
     </style>
 </head>
@@ -102,18 +115,20 @@
     <h1 class="title">Trigger</h1>
     
     <div class="content_wrapper">
+        <span class="greeting">Now you are part <br> of the crew</span>
         <p class="first_p">SHOW OFF <br> YOUR STYLE</p>
-        <span class="greeting">Now you are part of the crew</span>
         <div class="img"></div>
         <div class="info_wrapper">
-            <a href="https://compassionate-pare-644149.netlify.com/"><div class="website">VISIT TRIGGER.COM</div></a>
             <p class="info">For more information, <a href="tel:+39 02 12345678" class="contact_links">call</a> or <a href="mailto:trigger.superfluo@gmail.com" class="contact_links"> shoot us an email. </a>
                 <br><br>
                 Thank you, the Trigger team.
             </p>
         </div>
+        <a href="https://compassionate-pare-644149.netlify.com/"><div class="website">VISIT TRIGGER.COM</div></a>
     </div>
-    <div class="footer">© 2019 Trigger</div>
+    <div class="footer">© 2019 Trigger
+        <div class="social"></div>
+    </div>
 
 </body>
 </html>
