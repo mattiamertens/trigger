@@ -119,10 +119,19 @@ $(document).ready(function(){
     $('.slideshow').slick({
         dots: true,
         infinite: true,
-        arrows: true,
+        arrows: false,
         // centerMode: true
     });
 });
+$(document).ready(function(){
+    $('.slideshow_icons').slick({
+        dots: true,
+        infinite: true,
+        arrows: false,
+        // centerMode: true
+    });
+});
+
 
 
 // Video animation on scroll (ABOUT US)
