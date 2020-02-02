@@ -60,28 +60,12 @@ $(".finish").on('click', function(){
     $('.email_form').fadeIn();
 });
 
-$('.email_form').on('submit', e =>{
+$('.send').on('click', e =>{
     e.preventDefault();
 
     var mailTo = $('.mailTo').val().trim();
     console.log(mailTo);
     socket.emit('mail_address', {mailTo});
-    
-    // var obj_mail = {
-    //     mailTo
-    // }
-    // var testt = obj_mail.mailTo;
-    // console.log(testt);
-    // socket.emit('mail_address', {testt});
-
-    // $.post('/email', dataToServer)
-    // .then(() => {
-    //     window.location.href = '/email/sent';
-    // })
-    // .catch(() => {
-    //     window.location.href = '/error'
-    // })
-   
 });
 
 // CONFIRMATION OF EMAIL SENT

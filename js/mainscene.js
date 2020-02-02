@@ -225,17 +225,17 @@ $(window).resize(function () {
 
 
 // SAVEFILE FUNCTION //
-document.getElementsByClassName("send")[0].addEventListener('click', saveAsImage);
+// document.getElementsByClassName("send")[0].addEventListener('click', saveAsImage);
 
-function saveAsImage() {
-    var mailTo = $('.mailTo').val().trim();
-    var a = document.createElement('a');
+// function saveAsImage() {
+//     var mailTo = $('.mailTo').val().trim();
+//     var a = document.createElement('a');
 
-    renderer.render(scene, camera);
-    a.href = renderer.domElement.toDataURL().replace("image/octet-stream", "image/png");
-    a.download = mailTo;
-    a.click();
-}
+//     renderer.render(scene, camera);
+//     a.href = renderer.domElement.toDataURL().replace("image/octet-stream", "image/png");
+//     a.download = mailTo;
+//     a.click();
+// }
 
 
 

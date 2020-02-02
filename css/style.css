@@ -459,11 +459,6 @@ input{
 
 
 /* ABOUT US */
-.animated_txt{
-	position: relative;
-	width: 100%;
-	top: 152px;
-}
 .video{
 	position: relative;
 	margin-bottom: 200px;
@@ -544,10 +539,15 @@ input{
 	background-size: contain;
 	z-index: 10;
 }
+.shooting_title{
+	font-size: 76px;
+	max-width: 90%;
+	margin: 20px auto 0;
+}
 .slideshow{
 	max-width: 34%;
 	height: 700px;
-	margin: 80px auto 0;
+	margin: 30px auto 0;
 }
 .img-slider{
 	background-size: contain;
@@ -704,12 +704,11 @@ input{
 	position: fixed;
 	width: 60%;
 	height: 70%;
+	height: 600px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	z-index: 10000;
 	left: 50%;
-	transform: translate(-30%);
-	top: 6%;
 	display: none;
 }
 
@@ -727,10 +726,11 @@ input{
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 400;
 	font-size: 30px;
-	line-height: 36px;
+	line-height: 40kopx;
 }
 .project_title{
 	font-size: 85px;
+	font-weight: 500;
 	line-height: 85px;
 	margin-bottom: 30px;
 }
