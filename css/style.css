@@ -68,6 +68,26 @@ a {
 	line-height: 92px;
 	z-index: 101;
 }
+.footer_container{
+	margin: 0 auto;
+	height: 70px;
+	line-height: 70px;
+	border-top: 1px solid white;
+}
+.footer{
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500; /* weigth = 500 (medium) - 400 (normal) - 600 (bold) */
+	max-width: 95%;
+	margin: 0 auto;
+	height: 70px;
+	line-height: 70px;
+}
+.social{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+}
+
 .home{
 	position: absolute;
 	font-size: 40px;
@@ -440,10 +460,6 @@ input{
 	width: 100%;
 	top: 152px;
 }
-.outline{
-	-webkit-text-stroke: 1px white;
-	-webkit-text-fill-color: black;
-}
 .video{
 	position: relative;
 	margin-bottom: 200px;
@@ -460,135 +476,128 @@ input{
  /* Photo section  */
 .photo_wrapper{
 	position: relative;
-	font-size: 22px;
+	top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	margin: 0 50px;
+}
+.poster_container{
+	position: relative;
+	width: 100%;
+	height: 800px;
 	display: flex;
 	flex-wrap: wrap;
 }
-.photo_container{
-	position: relative;
+.campaign_title{
+	font-size: 76px;
 	width: 100%;
-	height: 850px;
 }
-.outline_txt{
-	position: absolute;
-	font-size: 28px;
-	width: 500px;
-	-webkit-text-stroke: 1px white;
-	-webkit-text-fill-color: black;
+.poster_1{
+	background-image: url('../public/json/assets/about_us/pics/poster/allas.png');
 }
-.outline_txt_1{
-	-webkit-text-stroke: 1px white;
-	-webkit-text-fill-color: black;
+.poster_2{
+	background-image: url('../public/json/assets/about_us/pics/poster/mea.png');
 }
-.parameters{
-	position: absolute;
-	line-height: 24px;
-	width: 300px;
+.poster_3{
+	background-image: url('../public/json/assets/about_us/pics/poster/bianca.png');
 }
 .about_pic{
-	position: absolute;
 	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0px 21px 0;
+	width: 30%;
+	height: 550px;
 }
-
-/* FIRST PHOTO CONTAINER */
-.ph_1{
-	width: 340px;
-	height: 510px;
-	left: 46%;
-	background-image: url('../public/json/assets/about_us/pics/meani_bianca.png');
-	z-index: 1;
-}
-.ph_2{
-	width: 250px;
-	height: 370px;
-	background-image: url('../public/json/assets/about_us/pics/mea.png');
-	left: 25%;
-	top: 35%
-}
-.txt_1{
-	top: 62%;
-	left: 66%;
-}
-.txt_2{
-	top: 85%;
-	left: 57%;
-}
-
-/* SECOND PHOTO CONTAINER */
-.ph_3{
-	width: 340px;
-	height: 510px;
-	/* background-image: url('../public/json/assets/about_us/pics/in_3.png'); */
-	left: 32%;
-	top: 10%;
+.zoomed{
+	position: absolute;
+	height: 800px;
+	width: 44%;
+	left: 50%;
+	transform: translate(-50%);
+	background-repeat: no-repeat;
 	background-size: cover;
 }
-.ph_4{
-	width: 250px;
-	height: 370px;
-	/* background-image: url('../public/json/assets/about_us/pics/bianca.png'); */
-	left: 59%;
-	top: 13%
+.presentation{
+	width: 100%;
+	height: 1000px;
+	position: absolute;
+	top: 150px;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 3;
 }
-.txt_3{
-	top: 3%;
-	left: 32%;
+.show_poster{
+	z-index: 2;
 }
-.txt_4{
-	top: 76%;
-	left: 26%;
+.close_poster{
+	position: absolute;
+	top: 1.5%;
+	left: 75%;
+	height: 36px;
+	width: 36px;
+	background: url('close.svg') no-repeat;
+	background-size: contain;
+	z-index: 10;
 }
-
-/* THIRD PHOTO CONTAINER */
-.ph_5{
-	width: 400px;
-	height: 600px;
-	/* background-image: url('../public/json/assets/about_us/pics/allas1-opt.gif'); */
-	background-size: cover;
-	left: 20%;
-	top: 7%
+.slideshow{
+	max-width: 34%;
+	height: 700px;
+	margin: 80px auto 0;
 }
-.ph_6{
-	width: 400px;
-	height: 600px;
-	/* background-image: url('../public/json/assets/about_us/pics/allas.png'); */
-	background-size: cover;
-	left: 52%;
-	top: 7%
-}
-.txt_5{
-	left: 71%;
-}
-.txt_6{
-	top: 83%;
-	left: 52%;
+.img-slider{
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 700px;
+	margin: 0 auto;
 }
 
-/* FOURTH PHOTO CONTAINER */
-.ph_7{
-	/* background-image: url('../public/json/assets/about_us/pics/allas_seduto.png'); */
-	background-size: cover;
-	width: 250px;
-	height: 360px;
-	left: 53%;
-	top: 11%;
+.img1{
+	background-image: url('../public/json/assets/about_us/pics/in_tre.jpg');
 }
-.ph_8{
-	/* background-image: url('../public/json/assets/about_us/pics/allas_bianca.png'); */
-	width: 320px;
-	height: 480px;
-	left: 27%;
-	top: 25%;
+.img2{
+	background-image: url('../public/json/assets/about_us/pics/allas_seduto.jpg');
 }
-.txt_7{
-	top: 11%;
-	left: 43%;
+.img3{
+	background-image: url('../public/json/assets/about_us/pics/allas1-opt.gif');
 }
-.txt_8{
-	top: 85%;
-	left: 53%;
+.img4{
+	background-image: url('../public/json/assets/about_us/pics/meani_bianca.jpg');
+}
+.img5{
+	background-image: url('../public/json/assets/about_us/pics/mea.jpg');
+}
+.img6{
+	background-image: url('../public/json/assets/about_us/pics/bianca.jpg');
+}
+.img7{
+	background-image: url('../public/json/assets/about_us/pics/allas.jpg');
 }
 
+/* SLICK RULES */
+/* dots */
+.slick-dots li button:before {
+	color: white;
+	font-size: 10px;
+	padding: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+	color:#00ff00;
+	font-size: 12px;
+}
+
+/* arrows */
+.slick-prev:before {
+	color: #00ff00;
+	position: relative;
+	left: -150%;
+}
+.slick-next:before {
+	color: #00ff00;
+	position: relative;
+	left: 150%;
+}
 
 
 /* ICONS */

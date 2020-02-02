@@ -1,20 +1,3 @@
-// var requirejs = require('requirejs');
-
-// requirejs.config({
-//     //Pass the top-level main.js/index.js require
-//     //function to requirejs so that node modules
-//     //are loaded relative to the top-level JS file.
-//     nodeRequire: require
-// });
-
-// requirejs(['foo', 'bar'],
-// function   (foo,   bar) {
-//     //foo and bar are loaded according to requirejs
-//     //config, but if not found, then node's require
-//     //is used to load the module.
-// });
-// var fs = require('fs');
-
 $(window).on('load', function(){
     $('.load_wrapper').fadeOut();    
 });
@@ -110,6 +93,36 @@ $('.send').click(function(){
 });
 
 
+// ABOUT US
+$('.about_pic').click(function(){
+    $('.presentation').show();
+})
+$('.poster_1').click(function(){
+    $('.poster_1').addClass('show_poster');
+    $('.poster_2, .poster_3').removeClass('show_poster');
+})
+$('.poster_2').click(function(){
+    $('.poster_2').addClass('show_poster');
+    $('.poster_1, .poster_3').removeClass('show_poster');
+})
+$('.poster_3').click(function(){
+    $('.poster_3').addClass('show_poster');
+    $('.poster_2, .poster_1').removeClass('show_poster');
+})
+$('.close_poster').click(function(){
+    $('.presentation').hide()
+    console.log('dndndn');
+});
+
+
+$(document).ready(function(){
+    $('.slideshow').slick({
+        dots: true,
+        infinite: true,
+        arrows: true,
+        // centerMode: true
+    });
+});
 
 
 // Video animation on scroll (ABOUT US)

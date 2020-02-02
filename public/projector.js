@@ -1,6 +1,7 @@
 var socket;
 // socket = io.connect('192.168.43.43:3000');
-socket = io.connect('localhost:3000');
+socket = io.connect('192.168.1.226:3000');
+// socket = io.connect('localhost:3000');
 
 // VAR miscellaneous 
 var mail_trigger = document.getElementsByClassName('send')[0]; // send email via form
