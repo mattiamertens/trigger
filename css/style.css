@@ -165,7 +165,8 @@ a {
 	background-repeat: no-repeat;
 }
 .r_pic1{
-	background-image: url('../public/json/assets/home/icons.png');
+	background-image: url('../public/json/assets/home/billie.jpg');
+	background-size: cover;
 }
 .r_pic2{
 	background-image: url('../public/json/assets/home/about_us.png');
@@ -266,7 +267,9 @@ a {
 }
 .confirmation{
 	position: relative;
-	top: 200px;
+	max-width: 60%;
+	margin: 0 auto;
+	top: 30%;
 	font-size: 24px;
 	display: none;
 }
@@ -351,7 +354,7 @@ input{
 }
 @keyframes vis {
     from{ transform: translate(0, 0); }
-    to { transform: translate(0, -101.1%); }
+    to { transform: translate(0, -100.1%); }
 }
 
 /* CLOSE COLOR PALETTE */

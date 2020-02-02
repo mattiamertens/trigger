@@ -66,6 +66,7 @@ $('.send').on('click', e =>{
     var mailTo = $('.mailTo').val().trim();
     console.log(mailTo);
     socket.emit('mail_address', {mailTo});
+    $('.email_form').hide();
 });
 
 // CONFIRMATION OF EMAIL SENT
