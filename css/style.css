@@ -27,7 +27,6 @@
 	height: 100%;
 	background-color: black;
 	z-index: 10000;
-	display: none; /*da cambiare */
 }
 
 .loader{
@@ -97,7 +96,6 @@ a {
 	font-size: 40px;
 	left: 20px;
 }
-
 .sections{
 	position: absolute;
 	left: 51%;
@@ -131,11 +129,9 @@ a {
 	height: 100%;
 	width: calc(100% - 340px);
 	z-index: 2;
-	/* border-right: 1px solid white; */
 }
 #video_home{
-	position: absolute;
-	height: 100%;
+	/* height: 100%; */
 }
 
 .side-column{
@@ -254,7 +250,7 @@ a {
 	/* z-index: 300; needs to change later, back to 300 */
 	width: 430px;
 }
-.email_form > p {
+.email_form {
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 500;
 }
@@ -267,11 +263,15 @@ a {
 }
 .confirmation{
 	position: relative;
+	font-family: neue-haas-unica, sans-serif;
+	font-weight: 500;
 	max-width: 60%;
 	margin: 0 auto;
 	top: 30%;
 	font-size: 24px;
 	display: none;
+	text-align: center;
+
 }
 input{
 	position: absolute;

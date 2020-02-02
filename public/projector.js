@@ -1,6 +1,6 @@
 var socket;
 // socket = io.connect('192.168.43.43:3000');
-socket = io.connect('192.168.1.75:3000');
+socket = io.connect('192.168.100.5:3000');
 // socket = io.connect('localhost:3000');
 
 // VAR miscellaneous 
