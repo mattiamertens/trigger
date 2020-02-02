@@ -66,22 +66,12 @@
 
         div.img{
             margin: 35px 0 41px 0;
-            height: 350px;
-            background-size: contain;
+            height: 200px;
+            background-color: thistle;
         }
-        .photo{
-            max-width: 300px;
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-        }
-        
-
         div.info_wrapper{
-            border-top: 1px solid white;
-            /* padding: 0 10px; */
-            max-width: 90%;
-            margin: 0 auto;
+            border: 1px solid white;
+            padding: 0 10px;
         }
         .contact_links{
             text-decoration: underline;
@@ -95,6 +85,7 @@
             top: 30px;
             left: 50%;
             transform: translate(-50%);
+            border: 1px solid white;
             margin-bottom: 30px;
             background-color: #00ff00;
             color: black;
@@ -102,25 +93,24 @@
         p.info{
             position: relative;
             font-size: 18px;
-            padding: 0px 10px;
-        }
-
-        .footer_container{
-        margin: 0 auto;
-        height: 60px;
-        line-height: 60px;
-        font-size: 12px;
         }
         .footer{
-            max-width: 90%;
-            margin: 0 auto;
-            position: relative;
-            top: 40px;
-        }
-        .social{
+            display: flex;
             position: absolute;
             left: 50%;
             transform: translate(-50%);
+            bottom: 0;
+            line-height: 40px;
+            font-size: 12px;
+            width: 90%;
+        }
+        .social{
+            background-image: url('ig_icon.svg');
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            left: 50%;
+            top: 10px;
         }
     </style>
 </head>
@@ -131,7 +121,7 @@
     <div class="content_wrapper">
         <div class="greeting"> <p class="crew">NOW YOU ARE <br> PART OF THE CREW</p> </div>
         <p class="first_p">SHOW OFF <br> YOUR STYLE</p>
-        <div class="img"> <img class="photo" src="email/email.png" alt=""> </div>
+        <div class="img"></div>
         <div class="info_wrapper">
             <p class="info">For more information, <a href="tel:+39 02 12345678" class="contact_links">call</a> or <a href="mailto:trigger.superfluo@gmail.com" class="contact_links"> shoot us an email. </a>
                 <br><br>
@@ -140,10 +130,8 @@
         </div>
         <a href="https://compassionate-pare-644149.netlify.com/"><div class="website">VISIT TRIGGER.COM</div></a>
     </div>
-    <div class="footer_container">
-        <div class="footer">© 2020 Trigger
-            <a class="social" href="https://www.instagram.com/trigger.milano/">@trigger.milano</a>
-        </div>
+    <div class="footer">© 2020 Trigger
+        <div class="social"></div>
     </div>
 
 </body>
