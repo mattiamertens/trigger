@@ -132,6 +132,7 @@ a {
 }
 #video_home{
 	/* height: 100%; */
+	position: absolute;
 }
 
 .side-column{
