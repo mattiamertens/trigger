@@ -337,10 +337,10 @@ input{
 /* PALETTE SELECTOR */
 .color_wrapper{
 	z-index: -100; 
-	width: 95%;
+	width: 98%;
 	height: 92%;
 	position: absolute;
-	margin: 0 2.5%;
+	margin: 0 1%;
 	top: 102%;
 	background-color:rgb(21, 21, 21);
 	overflow: scroll;
@@ -361,8 +361,8 @@ input{
 /* CLOSE COLOR PALETTE */
 .close{
 	position: sticky;
-	top: 1%;
-	left: 1%;
+	top: 1.5%;
+	left: 2%;
 	height: 30px;
 	width: 30px;
 	background: url('close.svg') no-repeat;
@@ -378,8 +378,8 @@ input{
 	line-height: 30px;
 }
 .color_palette{
-	width: 96%;
-	margin: 0 2%;
+	width: 94%;
+	margin: 0 3%;
 	height: auto;
 	position: absolute;
 	top: 5%;
