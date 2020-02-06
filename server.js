@@ -34,7 +34,7 @@ transporter.use('compile', hbs(handlebarOptions));
 // Socket.io projector
 const express = require('express');
 const app = express();
-const server = app.listen(80);
+const server = app.listen(3000);
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({
     extended: false
