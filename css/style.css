@@ -232,12 +232,21 @@ a {
 	background-color: #00ff00;
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 500;
+	background-position: center;
+	transition: background 0.8s;
 }
 .done{
 	position: absolute;
 	top: 91%;
 	left: 50%;
 	transform: translate(-50%);
+}
+
+/* BUTTON ANIMATION WHEN CLICKED */
+.btn:active {
+background-color: red;
+background-size: 100%;
+transition: background 0s;
 }
 
 /* EMAIL */
