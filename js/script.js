@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 
-$(window).scroll(function (event) {
+$(window).scroll(function (e) {
     var currentScrollPosition = $(window).scrollTop();
     console.log(currentScrollPosition);
 });
@@ -66,14 +66,16 @@ $('.send').on('click', e =>{
     var mailTo = $('.mailTo').val().trim();
     console.log(mailTo);
     socket.emit('mail_address', {mailTo});
-    $('.email_form').hide();
+    setTimeout(function(){
+        $('.email_form').fadeOut('slow');
+    }, 600);
 });
 
 // CONFIRMATION OF EMAIL SENT
 $('.send').click(function(){
     setTimeout(function(){
         $('.confirmation').show("fast");
-    }, 1000);
+    }, 1300);
 
 });
 
