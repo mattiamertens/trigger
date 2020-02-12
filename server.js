@@ -32,6 +32,10 @@ var transporter = nodemailer.createTransport({
 transporter.use('compile', hbs(handlebarOptions));
 
 // Socket.io projector
+var server = app.listen(process.env.PORT || 5000, function() {
+    var port = server.address().port;
+    console.log("Express is working on port " + port);
+});
 const express = require('express');
 const app = express();
 const server = app.listen(3000);
