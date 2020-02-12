@@ -1,8 +1,8 @@
 var socket;
 // socket = io.connect('192.168.43.125:3000');
 // socket = io.connect('192.168.100.5:3000');
-socket = io.connect('localhost:5000');
-// socket = io.connect();
+// socket = io.connect('localhost:5000');
+socket = io.connect();
 
 // VAR miscellaneous 
 var mail_trigger = document.getElementsByClassName('send')[0]; // send email via form
