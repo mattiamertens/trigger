@@ -30,7 +30,7 @@
 }
 
 .loader{
-	background-image: url('../public/json/assets/spinner.gif');
+	background-image: url('../json/assets/spinner.gif');
 	position: relative;
 	top: 50%;
 	left: 50%;
@@ -162,14 +162,14 @@ a {
 	background-repeat: no-repeat;
 }
 .r_pic1{
-	background-image: url('../public/json/assets/home/billie.jpg');
+	background-image: url('../json/assets/home/billie.jpg');
 	background-size: cover;
 }
 .r_pic2{
-	background-image: url('../public/json/assets/home/about_us.png');
+	background-image: url('../json/assets/home/about_us.png');
 }
 .r_pic3{
-	background-image: url('../public/json/assets/home/project.png');
+	background-image: url('../json/assets/home/project.png');
 }
 
 #icons{
@@ -208,19 +208,19 @@ a {
 }
 
 .calcio{
-	background-image: url('../public/json/assets/img/calcio.png');
+	background-image: url('../json/assets/img/calcio.png');
 	background-size: cover;
 }
 .canna{
-	background-image: url('../public/json/assets/img/canna.png');
+	background-image: url('../json/assets/img/canna.png');
 	background-size: cover;
 }
 .grilletto{
-	background-image: url('../public/json/assets/img/grilletto.png');
+	background-image: url('../json/assets/img/grilletto.png');
 	background-size: cover;
 }
 .dettagli{
-	background-image: url('../public/json/assets/img/dettagli.png');
+	background-image: url('../json/assets/img/dettagli.png');
 	background-size: cover;
 }
 .btn{
@@ -316,7 +316,7 @@ input{
 	left: 40%;
 	width: 250px;
 	height: 150px;
-	background-image: url('../public/json/assets/3D_animation.gif');
+	background-image: url('../json/assets/3D_animation.gif');
 	background-size: contain;
 }
 
@@ -332,7 +332,7 @@ input{
 	left: 25%;
 	width: 26px;
 	height: 39px;
-	background-image: url('../public/json/assets/img/arrow.png');
+	background-image: url('../json/assets/img/arrow.png');
 }
 .back_to_top_txt{
 	position: relative;
@@ -449,28 +449,28 @@ input{
 	background-color: #ff0066;
 }
 .t_1{
-	background-image: url('../public/json/assets/calcio/texture1.png');
+	background-image: url('../json/assets/calcio/texture1.png');
 }
 .t_2{
-	background-image: url('../public/json/assets/calcio/texture2.png');
+	background-image: url('../json/assets/calcio/texture2.png');
 }
 .t_3{
-	background-image: url('../public/json/assets/calcio/texture3.png');
+	background-image: url('../json/assets/calcio/texture3.png');
 }
 .t_4{
-	background-image: url('../public/json/assets/calcio/texture4.png');
+	background-image: url('../json/assets/calcio/texture4.png');
 }
 .t_5{
-	background-image: url('../public/json/assets/calcio/texture5.png');
+	background-image: url('../json/assets/calcio/texture5.png');
 }
 .t_6{
-	background-image: url('../public/json/assets/calcio/texture6.png');
+	background-image: url('../json/assets/calcio/texture6.png');
 }
 .t_7{
-	background-image: url('../public/json/assets/calcio/texture7.png');
+	background-image: url('../json/assets/calcio/texture7.png');
 }
 .t_8{
-	background-image: url('../public/json/assets/calcio/texture8.png');
+	background-image: url('../json/assets/calcio/texture8.png');
 }
 
 
@@ -510,13 +510,13 @@ input{
 	width: 100%;
 }
 .poster_1{
-	background-image: url('../public/json/assets/about_us/pics/poster/allas.png');
+	background-image: url('../json/assets/about_us/pics/poster/allas.png');
 }
 .poster_2{
-	background-image: url('../public/json/assets/about_us/pics/poster/mea.png');
+	background-image: url('../json/assets/about_us/pics/poster/mea.png');
 }
 .poster_3{
-	background-image: url('../public/json/assets/about_us/pics/poster/bianca.png');
+	background-image: url('../json/assets/about_us/pics/poster/bianca.png');
 }
 .about_pic{
 	background-size: contain;
@@ -574,25 +574,25 @@ input{
 }
 
 .img1{
-	background-image: url('../public/json/assets/about_us/pics/in_tre.jpg');
+	background-image: url('../json/assets/about_us/pics/in_tre.jpg');
 }
 .img2{
-	background-image: url('../public/json/assets/about_us/pics/allas_seduto.jpg');
+	background-image: url('../json/assets/about_us/pics/allas_seduto.jpg');
 }
 .img3{
-	background-image: url('../public/json/assets/about_us/pics/allas1-opt.gif');
+	background-image: url('../json/assets/about_us/pics/allas1-opt.gif');
 }
 .img4{
-	background-image: url('../public/json/assets/about_us/pics/meani_bianca.jpg');
+	background-image: url('../json/assets/about_us/pics/meani_bianca.jpg');
 }
 .img5{
-	background-image: url('../public/json/assets/about_us/pics/mea.jpg');
+	background-image: url('../json/assets/about_us/pics/mea.jpg');
 }
 .img6{
-	background-image: url('../public/json/assets/about_us/pics/bianca.jpg');
+	background-image: url('../json/assets/about_us/pics/bianca.jpg');
 }
 .img7{
-	background-image: url('../public/json/assets/about_us/pics/allas.jpg');
+	background-image: url('../json/assets/about_us/pics/allas.jpg');
 }
 
 /* SLICK RULES */
@@ -629,7 +629,7 @@ input{
 	margin: 0 auto;
 }
 .cover{
-	background-image: url('../public/json/assets/icons/Billie_Eilish/billie_cover.png');
+	background-image: url('../json/assets/icons/Billie_Eilish/billie_cover.png');
 	min-width: 100%;
 	height: 800px;
 	background-repeat: no-repeat;
@@ -669,17 +669,17 @@ input{
 .art_1{
 	width: 48%;
 	height: 100%;
-	background-image: url('../public/json/assets/icons/Billie_Eilish/billie_2.jpg');
+	background-image: url('../json/assets/icons/Billie_Eilish/billie_2.jpg');
 }
 .gun_1{
 	top: 10%;
 	width: 48%;
 	height: 80%;
-	background-image: url('../public/json/assets/icons/Billie_Eilish/gun.png');
+	background-image: url('../json/assets/icons/Billie_Eilish/gun.png');
 	background-position: 90%;
 }
 .cover_2{
-	background-image: url('../public/json/assets/icons/Billie_Eilish/cover_2.jpg');
+	background-image: url('../json/assets/icons/Billie_Eilish/cover_2.jpg');
 	min-width: 100%;
 	height: 800px;
 	background-size: cover;
@@ -705,13 +705,13 @@ input{
 }
 
 .icon_1{
-	background-image: url('../public/json/assets/icons/Billie_Eilish/sldshw/gun_1.jpg');
+	background-image: url('../json/assets/icons/Billie_Eilish/sldshw/gun_1.jpg');
 }
 .icon_2{
-	background-image: url('../public/json/assets/icons/Billie_Eilish/sldshw/gun_2.jpg');
+	background-image: url('../json/assets/icons/Billie_Eilish/sldshw/gun_2.jpg');
 }
 .icon_3{
-	background-image: url('../public/json/assets/icons/Billie_Eilish/sldshw/gun_3.jpg');
+	background-image: url('../json/assets/icons/Billie_Eilish/sldshw/gun_3.jpg');
 }
 
 
