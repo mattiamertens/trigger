@@ -114,8 +114,7 @@ $(document).ready(function(){
     $('.slideshow_icons').slick({
         dots: true,
         infinite: true,
-        arrows: false,
-        // centerMode: true
+        arrows: false
     });
 });
 
