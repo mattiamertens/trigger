@@ -38,8 +38,8 @@ app.use(express.static('public'));
 // app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
-const server = app.listen(process.env.PORT || 5000, function() {
-    const port = server.address().port;
+var server = app.listen(process.env.PORT || 5000, function() {
+    var port = server.address().port;
     console.log("Express is working on port " + port);
 });
 
