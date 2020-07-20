@@ -746,7 +746,7 @@ input{
 	font-family: neue-haas-unica, sans-serif;
 	font-weight: 400;
 	font-size: 30px;
-	line-height: 40kopx;
+	line-height: 40px;
 }
 .pure_txt{
 	max-width: 70%;
@@ -756,4 +756,41 @@ input{
 	font-weight: 500;
 	line-height: 85px;
 	margin-bottom: 30px;
+}
+
+.slideshow_project{
+	max-width: 34%;
+	height: 700px;
+	margin: 30px auto 0;
+}
+.project-slider{
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px;
+	margin: 0 auto;
+}
+
+.proj_1_1{
+	background-image: url('../json/assets/project/img/1.1.jpg');
+}
+.proj_1_2{
+	background-image: url('../json/assets/project/img/1.2.jpg');
+}
+.proj_1_3{
+	background-image: url('../json/assets/project/img/1.3.jpg');
+}
+.proj_2{
+	background-image: url('../json/assets/project/img/2.jpg');
+}
+.proj_3{
+	background-image: url('../json/assets/project/img/3.jpg');
+}
+.proj_4{
+	background-image: url('../json/assets/project/img/4.jpg');
+}
+.proj_5{
+	background-image: url('../json/assets/project/img/5.jpg');
+}
+.proj_6{
+	background-image: url('../json/assets/project/img/6.jpg');
 }

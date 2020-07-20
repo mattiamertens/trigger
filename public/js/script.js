@@ -117,6 +117,13 @@ $(document).ready(function(){
         arrows: false
     });
 });
+$(document).ready(function(){
+    $('.slideshow_project').slick({
+        dots: true,
+        infinite: true,
+        arrows: false
+    });
+});
 
 
 
