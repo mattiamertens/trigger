@@ -49,4 +49,19 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
 <!-- <script src='projector.js'></script> -->
 
+<script language='Javascript'>
+
+    var password;
+    var pass_correct = 'nolode';
+    password = prompt('Enter password to view page');
+    if (password == pass_correct){
+    alert('Very nice')
+    window.location='https://trigger-milan.herokuapp.com/';
+    }
+    else{
+        alert('Non sabotarmi la laurea!');
+        window.location='http://www.google.com'
+    }
+</script>
+
 </html>
