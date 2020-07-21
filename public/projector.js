@@ -78,9 +78,9 @@ var v_tco_8 = document.getElementsByClassName('t_8')[0],
 
 
 // send email via form
-// mail_trigger.addEventListener('click', function(){
-//     socket.emit('mail_sender', {});
-// });
+mail_trigger.addEventListener('click', function(){
+    socket.emit('mail_sender', {});
+});
 
 // Start & stop video on gun
 vid_start.addEventListener('click', function(){
